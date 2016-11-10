@@ -56,49 +56,49 @@
         <li class="header"><strong>PROGRAMAS DEL SISTEMA</strong></li>
         <!-- Procesos a manejar en el simulador -->
         <li>
-          <a id="btnproc_0"><i class="fa fa-folder-open-o"></i> <span id="proceso_1">Explorador</span></a>
+          <a id="btn_exp"><i class="fa fa-folder-open-o"></i> <span id="proceso_1">Explorador</span></a>
         </li>
         <li>
-          <a id="btnproc_1"><i class="fa fa-chrome"></i><span>Chrome</span></a>
+          <a id="btn_chr"><i class="fa fa-chrome"></i><span>Chrome</span></a>
         </li>
         <li>
-          <a id="btnproc_2"><i class="fa fa-terminal"></i> <span>Terminal del sistema</span></a>
+          <a id="btn_ter"><i class="fa fa-terminal"></i> <span>Terminal del sistema</span></a>
         </li>
         <li>
-          <a id="btnproc_3"><i class="fa fa-play"></i> <span>Reprod. Multimedia</span></a>
+          <a id="btn_rep"><i class="fa fa-play"></i> <span>Reprod. Multimedia</span></a>
         </li>
         <li>
-          <a id="btnproc_4"><i class="fa fa-file-text-o"></i> <span>Notepad++</span></a>
+          <a id="btn_not"><i class="fa fa-file-text-o"></i> <span>Notepad++</span></a>
         </li>
         <li>
-          <a id="btnproc_5"><i class="fa fa-tasks"></i> <span>Admin. de tareas</span></a>
+          <a id="btn_adm"><i class="fa fa-tasks"></i> <span>Admin. de tareas</span></a>
         </li>
         <li>
-          <a id="btnproc_6"><i class="fa fa-skype"></i> <span>Skype</span></a>
+          <a id="btn_sky"><i class="fa fa-skype"></i> <span>Skype</span></a>
         </li>
         <li>
-          <a id="btnproc_7"><i class="fa fa-quote-right"></i> <span>Hangouts</span></a>
+          <a id="btn_han"><i class="fa fa-quote-right"></i> <span>Hangouts</span></a>
         </li>
         <li>
-          <a id="btnproc_8"><i class="fa fa-file-archive-o"></i> <span>Winrar</span></a>
+          <a id="btn_win"><i class="fa fa-file-archive-o"></i> <span>Winrar</span></a>
         </li>
         <li>
-          <a id="btnproc_9"><i class="fa fa-leaf"></i> <span>Apache Server</span></a>
+          <a id="btn_apa"><i class="fa fa-leaf"></i> <span>Apache Server</span></a>
         </li>
         <li>
-          <a id="btnproc_10"><i class="fa fa-whatsapp"></i> <span>Whatsapp</span></a>
+          <a id="btn_wha"><i class="fa fa-whatsapp"></i> <span>Whatsapp</span></a>
         </li>
         <li>
-          <a id="btnproc_11"><i class="fa fa-git"></i> <span>Git</span></a>
+          <a id="btn_git"><i class="fa fa-git"></i> <span>Git</span></a>
         </li>
         <li>
-          <a id="btnproc_12"><i class="fa fa-calculator"></i> <span>Calculadora</span></a>
+          <a id="btn_cal"><i class="fa fa-calculator"></i> <span>Calculadora</span></a>
         </li>
         <li>
-          <a id="btnproc_13"><i class="fa fa-file-pdf-o"></i> <span>Acrobat Reader</span></a>
+          <a id="btn_acr"><i class="fa fa-file-pdf-o"></i> <span>Acrobat Reader</span></a>
         </li>
         <li>
-          <a id="btnproc_14"><i class="fa fa-battery-2"></i> <span>Gestion de la bateria</span></a>
+          <a id="btn_ges"><i class="fa fa-battery-2"></i> <span>Gestion de la bateria</span></a>
         </li>
       </ul>
     </section>
@@ -113,6 +113,9 @@
       <!-- Boton que ejecuta el algoritmo de deteccion de interbloqueos -->
       <a id="btn_ibalg" class="btn btn-app" style="margin-top:20px; margin-left:10px;">
                 <i class="fa fa-play"></i> Ejecutar Algoritmo
+      </a>
+      <a onclick="limpiarCampos()" id="btn_ibalg" class="btn btn-app" style="margin-top:20px; margin-left:10px;">
+                <i class="fa fa-eraser"></i> Limpiar Registro
       </a>
     </section>
 
@@ -135,11 +138,11 @@
               <th>Archivos</th>
             </tr>
             <tr>
+              <th><input class="form-control input-sm" type="text" id="rdcol0" style="border-radius:5px;"></th>
               <th><input class="form-control input-sm" type="text" id="rdcol1" style="border-radius:5px;"></th>
               <th><input class="form-control input-sm" type="text" id="rdcol2" style="border-radius:5px;"></th>
               <th><input class="form-control input-sm" type="text" id="rdcol3" style="border-radius:5px;"></th>
               <th><input class="form-control input-sm" type="text" id="rdcol4" style="border-radius:5px;"></th>
-              <th><input class="form-control input-sm" type="text" id="rdcol5" style="border-radius:5px;"></th>
             </tr>
             </thead>
             <tbody id="tabla_disponibles">
@@ -166,6 +169,7 @@
               <th>Camara web</th>
               <th>Memoria RAM</th>
               <th>Archivos</th>
+              <th>Estado final</th>
             </tr>
             </thead>
             <tbody id="tabla_asignados">
@@ -294,6 +298,8 @@
 <script src="dist/js/sleeper.js"></script>
 <!--Script que maneja la activacion y desactivacion de los procesos-->
 <script src="dist/js/manejarProceso.js"></script>
+<!-- Manejador adicional de la GUI que engloba funciones sencillas -->
+<script src="dist/js/manejadorGUI.js"></script>
 <!-- Script que maneja el algoritmo de deteccion de interbloqueos -->
 <script src="dist/js/bankerAlgorithm.js"></script>
 </body>
