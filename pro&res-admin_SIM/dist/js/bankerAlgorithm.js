@@ -6,24 +6,24 @@ $(document).ready(function(){
       disponibles del sistema.*/
       var matriz_ta = new Array(inf_proc.numProc_tabla);
       var matriz_tp = new Array(inf_proc.numProc_tabla);
-      var recursos_disp = new Array(3);
+      var recursos_disp = new Array(5);
       for (i = 0; i < inf_proc.numProc_tabla; i++) {
-        matriz_ta[i] = new Array(3);
-        matriz_tp[i] = new Array(3);
+        matriz_ta[i] = new Array(5);
+        matriz_tp[i] = new Array(5);
       }
       //Construccion del arreglo de los recursos disponibles del sistema
-      for (i = 0; i < 3; i++) {
+      for (i = 0; i < 5; i++) {
         recursos_disp[i] = parseInt($("#rdcol"+i).val());
       }
       //Construccion de la matriz de recursos del sistema asignados actualmente
       for (i=0; i < inf_proc.numProc_tabla; i++) {
-        for (j=0; j < 3; j++) {
+        for (j=0; j < 5; j++) {
           matriz_ta[i][j] = parseInt($("#fta_"+inf_proc.nom_procs[i]+j).val());
         }
       }
       //Construccion de la matriz de peticiones de recursos al sistema
       for (i=0; i < inf_proc.numProc_tabla; i++) {
-        for (j=0; j < 3; j++) {
+        for (j=0; j < 5; j++) {
           matriz_tp[i][j] = parseInt($("#ftp_"+inf_proc.nom_procs[i]+j).val());
         }
       }
@@ -38,8 +38,8 @@ $(document).ready(function(){
         recursos_disp[0],
         recursos_disp[1],
         recursos_disp[2],
-        //recursos_disp[3],
-        //recursos_disp[4]
+        recursos_disp[3],
+        recursos_disp[4]
       ];
       //Algoritmo de deteccion de interbloqueos
       /*Primero se comprueba si todas las asignaciones de los recursos j a los
@@ -47,7 +47,7 @@ $(document).ready(function(){
       tado de falsedad; de lo contrario, el proceso se encuentra en un estado
       de verdad.*/
       for (i = 0; i < inf_proc.numProc_tabla; i++) {
-        for (j = 0; j < 3; j++) {
+        for (j = 0; j < 5; j++) {
           if (matriz_ta[i][j] != 0) {
             finalizar[i] = false;
             break;
@@ -65,25 +65,26 @@ $(document).ready(function(){
       for (i = 0; i < inf_proc.numProc_tabla; i++) {
         proc_status=0;
         if (finalizar[i] != true) {
-          for (j = 0; j < 3; j++) {
+          for (j = 0; j < 5; j++) {
             if (!(matriz_tp[i][j] <= vacum_rec[j])) {
-              console.log("matriz_tp["+i+","+"]:"+matriz_tp[i][j]);
-              console.log("vacum_rec["+j+"]:"+vacum_rec[j]);
               proc_status=1;
-              $("#activ_"+inf_proc.nom_procs[i]).remove();
-              $("#fta_"+inf_proc.nom_procs[i]).append('<th id="fta_'+inf_proc.nom_procs[i]+'5">Bloqueado</th>');
+              $("#fta_"+inf_proc.nom_procs[i]).append('<th id="fta_'+inf_proc.nom_procs[i]+'5" style="background-color:#f56954;">Bloqueado</th>');
               break;
             }
           }
         }
         if (proc_status == 0) {
-          $("#activ_"+inf_proc.nom_procs[i]).remove();
-          $("#fta_"+inf_proc.nom_procs[i]).append('<th id="fta_'+inf_proc.nom_procs[i]+'5">Finalizado</th>');
-          for (j=0; j < 3; j++) {
+          $("#fta_"+inf_proc.nom_procs[i]).append('<th id="fta_'+inf_proc.nom_procs[i]+'5" style="background-color:#00a65a;">Finalizado</th>');
+          for (j=0; j < 5; j++) {
             vacum_rec[j] += matriz_ta[i][j];
-            console.log("vacum_rec["+j+"]:"+vacum_rec[j]);
           }
         }
+      }
+      /*Al final se muestran los recursos que se lograron devolver. Si se de-
+      volvieron todos es porque no hubo interbloqueo en el sistema y se en-
+      cuentra en un estado seguro.*/
+      for (i=0; i < 5; i++) {
+        $("#rdcol"+i).val(vacum_rec[i]);
       }
     });
 });

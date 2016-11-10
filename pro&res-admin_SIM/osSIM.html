@@ -110,6 +110,14 @@
         <i>Deteccion de interbloqueos</i>
         <small>Mas de una instancia de un tipo de recurso</small>
       </h1>
+      <!-- Descripcion mas amplia de la aplicacion de esta funcionalidad -->
+      <div class="callout callout-info" style="margin-top:25px;">
+        <h4><strong>Descripcion del programa</strong></h4>
+
+        <p>   Detector de estados seguros o inseguros de un sistema, asi como los interbloqueos dentro del mismo, con una interfaz
+        grafica manejable y configurable hasta cierto limite. Muestra las instancias de cada tipo de recurso y los diferentes
+        nombres de los procesos. El orden de ejecucion de cada proceso es de arriba hacia abajo.</p>
+      </div>
       <!-- Boton que ejecuta el algoritmo de deteccion de interbloqueos -->
       <a id="btn_ibalg" class="btn btn-app" style="margin-top:20px; margin-left:10px;">
                 <i class="fa fa-play"></i> Ejecutar Algoritmo
@@ -121,10 +129,10 @@
 
     <section class="content">
 
-      <!-- Tabla de los recursos del sistema disponibles -->
+      <!-- Tabla de los recursos del sistema disponibles acumulados -->
       <div class="box">
         <div class="box-header">
-          <h3 class="box-title">Recursos del sistema disponibles</h3>
+          <h3 class="box-title">Recursos del sistema disponibles acumulados</h3>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
@@ -153,10 +161,10 @@
           </table>
         </div>
       </div>
-      <!--Tabla de recursos asignados actualmente a los procesos-->
+      <!--Tabla de recursos asignados inicialmente a los procesos-->
       <div class="box">
         <div class="box-header">
-          <h3 class="box-title">Recursos del sistema asignados actualmente</h3>
+          <h3 class="box-title">Recursos del sistema asignados inicialmente</h3>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
