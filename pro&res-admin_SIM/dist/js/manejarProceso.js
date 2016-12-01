@@ -80,23 +80,25 @@ $(document).ready(function(){
       if (procesos_flags[0] === 0) {
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
-        $("#btn_exp").append('<i id="activ_exp" class="fa fa-circle text-success" style="margin-left:95px;"></i>');
+        $("#btn_exp").append('<i id="activ_exp" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
         $("#tabla_asignados").append('<tr id="fta_exp"></tr>');
         $("#fta_exp").append("<th>Explorador</th>");
-        $("#fta_exp").append('<th><input class="form-control input-sm" type="text" id="fta_exp0" style="border-radius:5px;"></th>');
+        $("#fta_exp").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_exp").append('<th><input class="form-control input-sm" type="text" id="fta_exp1" style="border-radius:5px;"></th>');
         $("#fta_exp").append('<th><input class="form-control input-sm" type="text" id="fta_exp2" style="border-radius:5px;"></th>');
         $("#fta_exp").append('<th><input class="form-control input-sm" type="text" id="fta_exp3" style="border-radius:5px;"></th>');
         $("#fta_exp").append('<th><input class="form-control input-sm" type="text" id="fta_exp4" style="border-radius:5px;"></th>');
+        $("#fta_exp").append('<th><input class="form-control input-sm" type="text" id="fta_exp5" style="border-radius:5px;"></th>');
 
         //Insercion de nuevas filas con respectivas columnas en la tabla de peticiones de recursos al sistema
         $("#tabla_peticiones").append('<tr id="ftp_exp"></tr>');
         $("#ftp_exp").append("<th>Explorador</th>");
-        $("#ftp_exp").append('<th><input class="form-control input-sm" type="text" id="ftp_exp0" style="border-radius:5px;"></th>');
+        $("#ftp_exp").append('<th style="color:#00a65a;">Activo</th>');
         $("#ftp_exp").append('<th><input class="form-control input-sm" type="text" id="ftp_exp1" style="border-radius:5px;"></th>');
         $("#ftp_exp").append('<th><input class="form-control input-sm" type="text" id="ftp_exp2" style="border-radius:5px;"></th>');
         $("#ftp_exp").append('<th><input class="form-control input-sm" type="text" id="ftp_exp3" style="border-radius:5px;"></th>');
         $("#ftp_exp").append('<th><input class="form-control input-sm" type="text" id="ftp_exp4" style="border-radius:5px;"></th>');
+        $("#ftp_exp").append('<th><input class="form-control input-sm" type="text" id="ftp_exp5" style="border-radius:5px;"></th>');
         procesos_flags[0] = 1;
         ++inf_proc.numProc_tabla;
         inf_proc.nom_procs.push("exp");
@@ -116,23 +118,25 @@ $(document).ready(function(){
       if (procesos_flags[1] === 0) {
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
-        $("#btn_chr").append('<i id="activ_chr" class="fa fa-circle text-success" style="margin-left:116px;"></i>');
+        $("#btn_chr").append('<i id="activ_chr" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
         $("#tabla_asignados").append('<tr id="fta_chr"></tr>');
         $("#fta_chr").append("<th>Chrome</th>");
-        $("#fta_chr").append('<th><input class="form-control input-sm" type="text" id="fta_chr0" style="border-radius:5px;"></th>');
+        $("#fta_chr").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_chr").append('<th><input class="form-control input-sm" type="text" id="fta_chr1" style="border-radius:5px;"></th>');
         $("#fta_chr").append('<th><input class="form-control input-sm" type="text" id="fta_chr2" style="border-radius:5px;"></th>');
         $("#fta_chr").append('<th><input class="form-control input-sm" type="text" id="fta_chr3" style="border-radius:5px;"></th>');
         $("#fta_chr").append('<th><input class="form-control input-sm" type="text" id="fta_chr4" style="border-radius:5px;"></th>');
+        $("#fta_chr").append('<th><input class="form-control input-sm" type="text" id="fta_chr5" style="border-radius:5px;"></th>');
 
         //Insercion de nuevas filas con respectivas columnas en la tabla de peticiones de recursos al sistema
         $("#tabla_peticiones").append('<tr id="ftp_chr"></tr>');
         $("#ftp_chr").append("<th>Chrome</th>");
-        $("#ftp_chr").append('<th><input class="form-control input-sm" type="text" id="ftp_chr0" style="border-radius:5px;"></th>');
+        $("#ftp_chr").append('<th style="color:#00a65a;">Activo</th>');
         $("#ftp_chr").append('<th><input class="form-control input-sm" type="text" id="ftp_chr1" style="border-radius:5px;"></th>');
         $("#ftp_chr").append('<th><input class="form-control input-sm" type="text" id="ftp_chr2" style="border-radius:5px;"></th>');
         $("#ftp_chr").append('<th><input class="form-control input-sm" type="text" id="ftp_chr3" style="border-radius:5px;"></th>');
         $("#ftp_chr").append('<th><input class="form-control input-sm" type="text" id="ftp_chr4" style="border-radius:5px;"></th>');
+        $("#ftp_chr").append('<th><input class="form-control input-sm" type="text" id="ftp_chr5" style="border-radius:5px;"></th>');
         procesos_flags[1] = 1;
         ++inf_proc.numProc_tabla;
         inf_proc.nom_procs.push("chr");
@@ -152,23 +156,25 @@ $(document).ready(function(){
       if (procesos_flags[2] === 0) {
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
-        $("#btn_ter").append('<i id="activ_ter" class="fa fa-circle text-success" style="margin-left:39px;"></i>');
+        $("#btn_ter").append('<i id="activ_ter" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
         $("#tabla_asignados").append('<tr id="fta_ter"></tr>');
         $("#fta_ter").append("<th>Terminal del sistema</th>");
-        $("#fta_ter").append('<th><input class="form-control input-sm" type="text" id="fta_ter0" style="border-radius:5px;"></th>');
+        $("#fta_ter").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_ter").append('<th><input class="form-control input-sm" type="text" id="fta_ter1" style="border-radius:5px;"></th>');
         $("#fta_ter").append('<th><input class="form-control input-sm" type="text" id="fta_ter2" style="border-radius:5px;"></th>');
         $("#fta_ter").append('<th><input class="form-control input-sm" type="text" id="fta_ter3" style="border-radius:5px;"></th>');
         $("#fta_ter").append('<th><input class="form-control input-sm" type="text" id="fta_ter4" style="border-radius:5px;"></th>');
+        $("#fta_ter").append('<th><input class="form-control input-sm" type="text" id="fta_ter5" style="border-radius:5px;"></th>');
 
         //Insercion de nuevas filas con respectivas columnas en la tabla de peticiones de recursos al sistema
         $("#tabla_peticiones").append('<tr id="ftp_ter"></tr>');
         $("#ftp_ter").append("<th>Terminal del sistema</th>");
-        $("#ftp_ter").append('<th><input class="form-control input-sm" type="text" id="ftp_ter0" style="border-radius:5px;"></th>');
+        $("#ftp_ter").append('<th style="color:#00a65a;">Activo</th>');
         $("#ftp_ter").append('<th><input class="form-control input-sm" type="text" id="ftp_ter1" style="border-radius:5px;"></th>');
         $("#ftp_ter").append('<th><input class="form-control input-sm" type="text" id="ftp_ter2" style="border-radius:5px;"></th>');
         $("#ftp_ter").append('<th><input class="form-control input-sm" type="text" id="ftp_ter3" style="border-radius:5px;"></th>');
         $("#ftp_ter").append('<th><input class="form-control input-sm" type="text" id="ftp_ter4" style="border-radius:5px;"></th>');
+        $("#ftp_ter").append('<th><input class="form-control input-sm" type="text" id="ftp_ter5" style="border-radius:5px;"></th>');
         procesos_flags[2] = 1;
         ++inf_proc.numProc_tabla;
         inf_proc.nom_procs.push("ter");
@@ -188,23 +194,25 @@ $(document).ready(function(){
       if (procesos_flags[3] === 0) {
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
-        $("#btn_rep").append('<i id="activ_rep" class="fa fa-circle text-success" style="margin-left:44px;"></i>');
+        $("#btn_rep").append('<i id="activ_rep" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
         $("#tabla_asignados").append('<tr id="fta_rep"></tr>');
         $("#fta_rep").append("<th>Reproductor Multimedia</th>");
-        $("#fta_rep").append('<th><input class="form-control input-sm" type="text" id="fta_rep0" style="border-radius:5px;"></th>');
+        $("#fta_rep").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_rep").append('<th><input class="form-control input-sm" type="text" id="fta_rep1" style="border-radius:5px;"></th>');
         $("#fta_rep").append('<th><input class="form-control input-sm" type="text" id="fta_rep2" style="border-radius:5px;"></th>');
         $("#fta_rep").append('<th><input class="form-control input-sm" type="text" id="fta_rep3" style="border-radius:5px;"></th>');
         $("#fta_rep").append('<th><input class="form-control input-sm" type="text" id="fta_rep4" style="border-radius:5px;"></th>');
+        $("#fta_rep").append('<th><input class="form-control input-sm" type="text" id="fta_rep5" style="border-radius:5px;"></th>');
 
         //Insercion de nuevas filas con respectivas columnas en la tabla de peticiones de recursos al sistema
         $("#tabla_peticiones").append('<tr id="ftp_rep"></tr>');
         $("#ftp_rep").append("<th>Reproductor Multimedia</th>");
-        $("#ftp_rep").append('<th><input class="form-control input-sm" type="text" id="ftp_rep0" style="border-radius:5px;"></th>');
+        $("#ftp_rep").append('<th style="color:#00a65a;">Activo</th>');
         $("#ftp_rep").append('<th><input class="form-control input-sm" type="text" id="ftp_rep1" style="border-radius:5px;"></th>');
         $("#ftp_rep").append('<th><input class="form-control input-sm" type="text" id="ftp_rep2" style="border-radius:5px;"></th>');
         $("#ftp_rep").append('<th><input class="form-control input-sm" type="text" id="ftp_rep3" style="border-radius:5px;"></th>');
         $("#ftp_rep").append('<th><input class="form-control input-sm" type="text" id="ftp_rep4" style="border-radius:5px;"></th>');
+        $("#ftp_rep").append('<th><input class="form-control input-sm" type="text" id="ftp_rep5" style="border-radius:5px;"></th>');
         procesos_flags[3] = 1;
         ++inf_proc.numProc_tabla;
         inf_proc.nom_procs.push("rep");
@@ -224,23 +232,25 @@ $(document).ready(function(){
       if (procesos_flags[4] === 0) {
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
-        $("#btn_not").append('<i id="activ_not" class="fa fa-circle text-success" style="margin-left:95px;"></i>');
+        $("#btn_not").append('<i id="activ_not" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
         $("#tabla_asignados").append('<tr id="fta_not"></tr>');
         $("#fta_not").append("<th>Notepad++</th>");
-        $("#fta_not").append('<th><input class="form-control input-sm" type="text" id="fta_not0" style="border-radius:5px;"></th>');
+        $("#fta_not").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_not").append('<th><input class="form-control input-sm" type="text" id="fta_not1" style="border-radius:5px;"></th>');
         $("#fta_not").append('<th><input class="form-control input-sm" type="text" id="fta_not2" style="border-radius:5px;"></th>');
         $("#fta_not").append('<th><input class="form-control input-sm" type="text" id="fta_not3" style="border-radius:5px;"></th>');
         $("#fta_not").append('<th><input class="form-control input-sm" type="text" id="fta_not4" style="border-radius:5px;"></th>');
+        $("#fta_not").append('<th><input class="form-control input-sm" type="text" id="fta_not5" style="border-radius:5px;"></th>');
 
         //Insercion de nuevas filas con respectivas columnas en la tabla de peticiones de recursos al sistema
         $("#tabla_peticiones").append('<tr id="ftp_not"></tr>');
         $("#ftp_not").append("<th>Notepad++</th>");
-        $("#ftp_not").append('<th><input class="form-control input-sm" type="text" id="ftp_not0" style="border-radius:5px;"></th>');
+        $("#ftp_not").append('<th style="color:#00a65a;">Activo</th>');
         $("#ftp_not").append('<th><input class="form-control input-sm" type="text" id="ftp_not1" style="border-radius:5px;"></th>');
         $("#ftp_not").append('<th><input class="form-control input-sm" type="text" id="ftp_not2" style="border-radius:5px;"></th>');
         $("#ftp_not").append('<th><input class="form-control input-sm" type="text" id="ftp_not3" style="border-radius:5px;"></th>');
         $("#ftp_not").append('<th><input class="form-control input-sm" type="text" id="ftp_not4" style="border-radius:5px;"></th>');
+        $("#ftp_not").append('<th><input class="form-control input-sm" type="text" id="ftp_not5" style="border-radius:5px;"></th>');
         procesos_flags[4] = 1;
         ++inf_proc.numProc_tabla;
         inf_proc.nom_procs.push("not");
@@ -260,23 +270,25 @@ $(document).ready(function(){
       if (procesos_flags[5] === 0) {
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
-        $("#btn_adm").append('<i id="activ_adm" class="fa fa-circle text-success" style="margin-left:61px;"></i>');
+        $("#btn_adm").append('<i id="activ_adm" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
         $("#tabla_asignados").append('<tr id="fta_adm"></tr>');
         $("#fta_adm").append("<th>Administrador de tareas</th>");
-        $("#fta_adm").append('<th><input class="form-control input-sm" type="text" id="fta_adm0" style="border-radius:5px;"></th>');
+        $("#fta_adm").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_adm").append('<th><input class="form-control input-sm" type="text" id="fta_adm1" style="border-radius:5px;"></th>');
         $("#fta_adm").append('<th><input class="form-control input-sm" type="text" id="fta_adm2" style="border-radius:5px;"></th>');
         $("#fta_adm").append('<th><input class="form-control input-sm" type="text" id="fta_adm3" style="border-radius:5px;"></th>');
         $("#fta_adm").append('<th><input class="form-control input-sm" type="text" id="fta_adm4" style="border-radius:5px;"></th>');
+        $("#fta_adm").append('<th><input class="form-control input-sm" type="text" id="fta_adm5" style="border-radius:5px;"></th>');
 
         //Insercion de nuevas filas con respectivas columnas en la tabla de peticiones de recursos al sistema
         $("#tabla_peticiones").append('<tr id="ftp_adm"></tr>');
         $("#ftp_adm").append("<th>Administrador de tareas</th>");
-        $("#ftp_adm").append('<th><input class="form-control input-sm" type="text" id="ftp_adm0" style="border-radius:5px;"></th>');
+        $("#ftp_adm").append('<th style="color:#00a65a;">Activo</th>');
         $("#ftp_adm").append('<th><input class="form-control input-sm" type="text" id="ftp_adm1" style="border-radius:5px;"></th>');
         $("#ftp_adm").append('<th><input class="form-control input-sm" type="text" id="ftp_adm2" style="border-radius:5px;"></th>');
         $("#ftp_adm").append('<th><input class="form-control input-sm" type="text" id="ftp_adm3" style="border-radius:5px;"></th>');
         $("#ftp_adm").append('<th><input class="form-control input-sm" type="text" id="ftp_adm4" style="border-radius:5px;"></th>');
+        $("#ftp_adm").append('<th><input class="form-control input-sm" type="text" id="ftp_adm5" style="border-radius:5px;"></th>');
         procesos_flags[5] = 1;
         ++inf_proc.numProc_tabla;
         inf_proc.nom_procs.push("adm");
@@ -296,23 +308,25 @@ $(document).ready(function(){
       if (procesos_flags[6] === 0) {
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
-        $("#btn_sky").append('<i id="activ_sky" class="fa fa-circle text-success" style="margin-left:123px;"></i>');
+        $("#btn_sky").append('<i id="activ_sky" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
         $("#tabla_asignados").append('<tr id="fta_sky"></tr>');
         $("#fta_sky").append("<th>Skype</th>");
-        $("#fta_sky").append('<th><input class="form-control input-sm" type="text" id="fta_sky0" style="border-radius:5px;"></th>');
+        $("#fta_sky").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_sky").append('<th><input class="form-control input-sm" type="text" id="fta_sky1" style="border-radius:5px;"></th>');
         $("#fta_sky").append('<th><input class="form-control input-sm" type="text" id="fta_sky2" style="border-radius:5px;"></th>');
         $("#fta_sky").append('<th><input class="form-control input-sm" type="text" id="fta_sky3" style="border-radius:5px;"></th>');
         $("#fta_sky").append('<th><input class="form-control input-sm" type="text" id="fta_sky4" style="border-radius:5px;"></th>');
+        $("#fta_sky").append('<th><input class="form-control input-sm" type="text" id="fta_sky5" style="border-radius:5px;"></th>');
 
         //Insercion de nuevas filas con respectivas columnas en la tabla de peticiones de recursos al sistema
         $("#tabla_peticiones").append('<tr id="ftp_sky"></tr>');
         $("#ftp_sky").append("<th>Skype</th>");
-        $("#ftp_sky").append('<th><input class="form-control input-sm" type="text" id="ftp_sky0" style="border-radius:5px;"></th>');
+        $("#ftp_sky").append('<th style="color:#00a65a;">Activo</th>');
         $("#ftp_sky").append('<th><input class="form-control input-sm" type="text" id="ftp_sky1" style="border-radius:5px;"></th>');
         $("#ftp_sky").append('<th><input class="form-control input-sm" type="text" id="ftp_sky2" style="border-radius:5px;"></th>');
         $("#ftp_sky").append('<th><input class="form-control input-sm" type="text" id="ftp_sky3" style="border-radius:5px;"></th>');
         $("#ftp_sky").append('<th><input class="form-control input-sm" type="text" id="ftp_sky4" style="border-radius:5px;"></th>');
+        $("#ftp_sky").append('<th><input class="form-control input-sm" type="text" id="ftp_sky5" style="border-radius:5px;"></th>');
         procesos_flags[6] = 1;
         ++inf_proc.numProc_tabla;
         inf_proc.nom_procs.push("sky");
@@ -332,23 +346,25 @@ $(document).ready(function(){
       if (procesos_flags[7] === 0) {
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
-        $("#btn_han").append('<i id="activ_han" class="fa fa-circle text-success" style="margin-left:101px;"></i>');
+        $("#btn_han").append('<i id="activ_han" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
         $("#tabla_asignados").append('<tr id="fta_han"></tr>');
         $("#fta_han").append("<th>Hangouts</th>");
-        $("#fta_han").append('<th><input class="form-control input-sm" type="text" id="fta_han0" style="border-radius:5px;"></th>');
+        $("#fta_han").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_han").append('<th><input class="form-control input-sm" type="text" id="fta_han1" style="border-radius:5px;"></th>');
         $("#fta_han").append('<th><input class="form-control input-sm" type="text" id="fta_han2" style="border-radius:5px;"></th>');
         $("#fta_han").append('<th><input class="form-control input-sm" type="text" id="fta_han3" style="border-radius:5px;"></th>');
         $("#fta_han").append('<th><input class="form-control input-sm" type="text" id="fta_han4" style="border-radius:5px;"></th>');
+        $("#fta_han").append('<th><input class="form-control input-sm" type="text" id="fta_han5" style="border-radius:5px;"></th>');
 
         //Insercion de nuevas filas con respectivas columnas en la tabla de peticiones de recursos al sistema
         $("#tabla_peticiones").append('<tr id="ftp_han"></tr>');
         $("#ftp_han").append("<th>Hangouts</th>");
-        $("#ftp_han").append('<th><input class="form-control input-sm" type="text" id="ftp_han0" style="border-radius:5px;"></th>');
+        $("#ftp_han").append('<th style="color:#00a65a;">Activo</th>');
         $("#ftp_han").append('<th><input class="form-control input-sm" type="text" id="ftp_han1" style="border-radius:5px;"></th>');
         $("#ftp_han").append('<th><input class="form-control input-sm" type="text" id="ftp_han2" style="border-radius:5px;"></th>');
         $("#ftp_han").append('<th><input class="form-control input-sm" type="text" id="ftp_han3" style="border-radius:5px;"></th>');
         $("#ftp_han").append('<th><input class="form-control input-sm" type="text" id="ftp_han4" style="border-radius:5px;"></th>');
+        $("#ftp_han").append('<th><input class="form-control input-sm" type="text" id="ftp_han5" style="border-radius:5px;"></th>');
         procesos_flags[7] = 1;
         ++inf_proc.numProc_tabla;
         inf_proc.nom_procs.push("han");
@@ -368,23 +384,25 @@ $(document).ready(function(){
       if (procesos_flags[8] === 0) {
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
-        $("#btn_win").append('<i id="activ_win" class="fa fa-circle text-success" style="margin-left:119px;"></i>');
+        $("#btn_win").append('<i id="activ_win" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
         $("#tabla_asignados").append('<tr id="fta_win"></tr>');
         $("#fta_win").append("<th>Winrar</th>");
-        $("#fta_win").append('<th><input class="form-control input-sm" type="text" id="fta_win0" style="border-radius:5px;"></th>');
+        $("#fta_win").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_win").append('<th><input class="form-control input-sm" type="text" id="fta_win1" style="border-radius:5px;"></th>');
         $("#fta_win").append('<th><input class="form-control input-sm" type="text" id="fta_win2" style="border-radius:5px;"></th>');
         $("#fta_win").append('<th><input class="form-control input-sm" type="text" id="fta_win3" style="border-radius:5px;"></th>');
         $("#fta_win").append('<th><input class="form-control input-sm" type="text" id="fta_win4" style="border-radius:5px;"></th>');
+        $("#fta_win").append('<th><input class="form-control input-sm" type="text" id="fta_win5" style="border-radius:5px;"></th>');
 
         //Insercion de nuevas filas con respectivas columnas en la tabla de peticiones de recursos al sistema
         $("#tabla_peticiones").append('<tr id="ftp_win"></tr>');
         $("#ftp_win").append("<th>Winrar</th>");
-        $("#ftp_win").append('<th><input class="form-control input-sm" type="text" id="ftp_win0" style="border-radius:5px;"></th>');
+        $("#ftp_win").append('<th style="color:#00a65a;">Activo</th>');
         $("#ftp_win").append('<th><input class="form-control input-sm" type="text" id="ftp_win1" style="border-radius:5px;"></th>');
         $("#ftp_win").append('<th><input class="form-control input-sm" type="text" id="ftp_win2" style="border-radius:5px;"></th>');
         $("#ftp_win").append('<th><input class="form-control input-sm" type="text" id="ftp_win3" style="border-radius:5px;"></th>');
         $("#ftp_win").append('<th><input class="form-control input-sm" type="text" id="ftp_win4" style="border-radius:5px;"></th>');
+        $("#ftp_win").append('<th><input class="form-control input-sm" type="text" id="ftp_win5" style="border-radius:5px;"></th>');
         procesos_flags[8] = 1;
         ++inf_proc.numProc_tabla;
         inf_proc.nom_procs.push("win");
@@ -404,23 +422,25 @@ $(document).ready(function(){
       if (procesos_flags[9] === 0) {
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
-        $("#btn_apa").append('<i id="activ_apa" class="fa fa-circle text-success" style="margin-left:73px;"></i>');
+        $("#btn_apa").append('<i id="activ_apa" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
         $("#tabla_asignados").append('<tr id="fta_apa"></tr>');
         $("#fta_apa").append("<th>Apache Server</th>");
-        $("#fta_apa").append('<th><input class="form-control input-sm" type="text" id="fta_apa0" style="border-radius:5px;"></th>');
+        $("#fta_apa").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_apa").append('<th><input class="form-control input-sm" type="text" id="fta_apa1" style="border-radius:5px;"></th>');
         $("#fta_apa").append('<th><input class="form-control input-sm" type="text" id="fta_apa2" style="border-radius:5px;"></th>');
         $("#fta_apa").append('<th><input class="form-control input-sm" type="text" id="fta_apa3" style="border-radius:5px;"></th>');
         $("#fta_apa").append('<th><input class="form-control input-sm" type="text" id="fta_apa4" style="border-radius:5px;"></th>');
+        $("#fta_apa").append('<th><input class="form-control input-sm" type="text" id="fta_apa5" style="border-radius:5px;"></th>');
 
         //Insercion de nuevas filas con respectivas columnas en la tabla de peticiones de recursos al sistema
         $("#tabla_peticiones").append('<tr id="ftp_apa"></tr>');
         $("#ftp_apa").append("<th>Apache Server</th>");
-        $("#ftp_apa").append('<th><input class="form-control input-sm" type="text" id="ftp_apa0" style="border-radius:5px;"></th>');
+        $("#ftp_apa").append('<th style="color:#00a65a;">Activo</th>');
         $("#ftp_apa").append('<th><input class="form-control input-sm" type="text" id="ftp_apa1" style="border-radius:5px;"></th>');
         $("#ftp_apa").append('<th><input class="form-control input-sm" type="text" id="ftp_apa2" style="border-radius:5px;"></th>');
         $("#ftp_apa").append('<th><input class="form-control input-sm" type="text" id="ftp_apa3" style="border-radius:5px;"></th>');
         $("#ftp_apa").append('<th><input class="form-control input-sm" type="text" id="ftp_apa4" style="border-radius:5px;"></th>');
+        $("#ftp_apa").append('<th><input class="form-control input-sm" type="text" id="ftp_apa5" style="border-radius:5px;"></th>');
         procesos_flags[9] = 1;
         ++inf_proc.numProc_tabla;
         inf_proc.nom_procs.push("apa");
@@ -440,23 +460,25 @@ $(document).ready(function(){
       if (procesos_flags[10] === 0) {
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
-        $("#btn_wha").append('<i id="activ_wha" class="fa fa-circle text-success" style="margin-left:98px;"></i>');
+        $("#btn_wha").append('<i id="activ_wha" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
         $("#tabla_asignados").append('<tr id="fta_wha"></tr>');
         $("#fta_wha").append("<th>Whatsapp</th>");
-        $("#fta_wha").append('<th><input class="form-control input-sm" type="text" id="fta_wha0" style="border-radius:5px;"></th>');
+        $("#fta_wha").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_wha").append('<th><input class="form-control input-sm" type="text" id="fta_wha1" style="border-radius:5px;"></th>');
         $("#fta_wha").append('<th><input class="form-control input-sm" type="text" id="fta_wha2" style="border-radius:5px;"></th>');
         $("#fta_wha").append('<th><input class="form-control input-sm" type="text" id="fta_wha3" style="border-radius:5px;"></th>');
         $("#fta_wha").append('<th><input class="form-control input-sm" type="text" id="fta_wha4" style="border-radius:5px;"></th>');
+        $("#fta_wha").append('<th><input class="form-control input-sm" type="text" id="fta_wha5" style="border-radius:5px;"></th>');
 
         //Insercion de nuevas filas con respectivas columnas en la tabla de peticiones de recursos al sistema
         $("#tabla_peticiones").append('<tr id="ftp_wha"></tr>');
         $("#ftp_wha").append("<th>Whatsapp</th>");
-        $("#ftp_wha").append('<th><input class="form-control input-sm" type="text" id="ftp_wha0" style="border-radius:5px;"></th>');
+        $("#ftp_wha").append('<th style="color:#00a65a;">Activo</th>');
         $("#ftp_wha").append('<th><input class="form-control input-sm" type="text" id="ftp_wha1" style="border-radius:5px;"></th>');
         $("#ftp_wha").append('<th><input class="form-control input-sm" type="text" id="ftp_wha2" style="border-radius:5px;"></th>');
         $("#ftp_wha").append('<th><input class="form-control input-sm" type="text" id="ftp_wha3" style="border-radius:5px;"></th>');
         $("#ftp_wha").append('<th><input class="form-control input-sm" type="text" id="ftp_wha4" style="border-radius:5px;"></th>');
+        $("#ftp_wha").append('<th><input class="form-control input-sm" type="text" id="ftp_wha5" style="border-radius:5px;"></th>');
         procesos_flags[10] = 1;
         ++inf_proc.numProc_tabla;
         inf_proc.nom_procs.push("wha");
@@ -476,23 +498,25 @@ $(document).ready(function(){
       if (procesos_flags[11] === 0) {
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
-        $("#btn_git").append('<i id="activ_git" class="fa fa-circle text-success" style="margin-left:140px;"></i>');
+        $("#btn_git").append('<i id="activ_git" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
         $("#tabla_asignados").append('<tr id="fta_git"></tr>');
         $("#fta_git").append("<th>Git</th>");
-        $("#fta_git").append('<th><input class="form-control input-sm" type="text" id="fta_git0" style="border-radius:5px;"></th>');
+        $("#fta_git").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_git").append('<th><input class="form-control input-sm" type="text" id="fta_git1" style="border-radius:5px;"></th>');
         $("#fta_git").append('<th><input class="form-control input-sm" type="text" id="fta_git2" style="border-radius:5px;"></th>');
         $("#fta_git").append('<th><input class="form-control input-sm" type="text" id="fta_git3" style="border-radius:5px;"></th>');
         $("#fta_git").append('<th><input class="form-control input-sm" type="text" id="fta_git4" style="border-radius:5px;"></th>');
+        $("#fta_git").append('<th><input class="form-control input-sm" type="text" id="fta_git5" style="border-radius:5px;"></th>');
 
         //Insercion de nuevas filas con respectivas columnas en la tabla de peticiones de recursos al sistema
         $("#tabla_peticiones").append('<tr id="ftp_git"></tr>');
         $("#ftp_git").append("<th>Git</th>");
-        $("#ftp_git").append('<th><input class="form-control input-sm" type="text" id="ftp_git0" style="border-radius:5px;"></th>');
+        $("#ftp_git").append('<th style="color:#00a65a;">Activo</th>');
         $("#ftp_git").append('<th><input class="form-control input-sm" type="text" id="ftp_git1" style="border-radius:5px;"></th>');
         $("#ftp_git").append('<th><input class="form-control input-sm" type="text" id="ftp_git2" style="border-radius:5px;"></th>');
         $("#ftp_git").append('<th><input class="form-control input-sm" type="text" id="ftp_git3" style="border-radius:5px;"></th>');
         $("#ftp_git").append('<th><input class="form-control input-sm" type="text" id="ftp_git4" style="border-radius:5px;"></th>');
+        $("#ftp_git").append('<th><input class="form-control input-sm" type="text" id="ftp_git5" style="border-radius:5px;"></th>');
         procesos_flags[11] = 1;
         ++inf_proc.numProc_tabla;
         inf_proc.nom_procs.push("git");
@@ -512,23 +536,25 @@ $(document).ready(function(){
       if (procesos_flags[12] === 0) {
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
-        $("#btn_cal").append('<i id="activ_cal" class="fa fa-circle text-success" style="margin-left:86px;"></i>');
+        $("#btn_cal").append('<i id="activ_cal" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
         $("#tabla_asignados").append('<tr id="fta_cal"></tr>');
         $("#fta_cal").append("<th>Calculadora</th>");
-        $("#fta_cal").append('<th><input class="form-control input-sm" type="text" id="fta_cal0" style="border-radius:5px;"></th>');
+        $("#fta_cal").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_cal").append('<th><input class="form-control input-sm" type="text" id="fta_cal1" style="border-radius:5px;"></th>');
         $("#fta_cal").append('<th><input class="form-control input-sm" type="text" id="fta_cal2" style="border-radius:5px;"></th>');
         $("#fta_cal").append('<th><input class="form-control input-sm" type="text" id="fta_cal3" style="border-radius:5px;"></th>');
         $("#fta_cal").append('<th><input class="form-control input-sm" type="text" id="fta_cal4" style="border-radius:5px;"></th>');
+        $("#fta_cal").append('<th><input class="form-control input-sm" type="text" id="fta_cal5" style="border-radius:5px;"></th>');
 
         //Insercion de nuevas filas con respectivas columnas en la tabla de peticiones de recursos al sistema
         $("#tabla_peticiones").append('<tr id="ftp_cal"></tr>');
         $("#ftp_cal").append("<th>Calculadora</th>");
-        $("#ftp_cal").append('<th><input class="form-control input-sm" type="text" id="ftp_cal0" style="border-radius:5px;"></th>');
+        $("#ftp_cal").append('<th style="color:#00a65a;">Activo</th>');
         $("#ftp_cal").append('<th><input class="form-control input-sm" type="text" id="ftp_cal1" style="border-radius:5px;"></th>');
         $("#ftp_cal").append('<th><input class="form-control input-sm" type="text" id="ftp_cal2" style="border-radius:5px;"></th>');
         $("#ftp_cal").append('<th><input class="form-control input-sm" type="text" id="ftp_cal3" style="border-radius:5px;"></th>');
         $("#ftp_cal").append('<th><input class="form-control input-sm" type="text" id="ftp_cal4" style="border-radius:5px;"></th>');
+        $("#ftp_cal").append('<th><input class="form-control input-sm" type="text" id="ftp_cal5" style="border-radius:5px;"></th>');
         procesos_flags[12] = 1;
         ++inf_proc.numProc_tabla;
         inf_proc.nom_procs.push("cal");
@@ -548,23 +574,25 @@ $(document).ready(function(){
       if (procesos_flags[13] === 0) {
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
-        $("#btn_acr").append('<i id="activ_acr" class="fa fa-circle text-success" style="margin-left:66px;"></i>');
+        $("#btn_acr").append('<i id="activ_acr" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
         $("#tabla_asignados").append('<tr id="fta_acr"></tr>');
         $("#fta_acr").append("<th>Acrobat Reader</th>");
-        $("#fta_acr").append('<th><input class="form-control input-sm" type="text" id="fta_acr0" style="border-radius:5px;"></th>');
+        $("#fta_acr").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_acr").append('<th><input class="form-control input-sm" type="text" id="fta_acr1" style="border-radius:5px;"></th>');
         $("#fta_acr").append('<th><input class="form-control input-sm" type="text" id="fta_acr2" style="border-radius:5px;"></th>');
         $("#fta_acr").append('<th><input class="form-control input-sm" type="text" id="fta_acr3" style="border-radius:5px;"></th>');
         $("#fta_acr").append('<th><input class="form-control input-sm" type="text" id="fta_acr4" style="border-radius:5px;"></th>');
+        $("#fta_acr").append('<th><input class="form-control input-sm" type="text" id="fta_acr5" style="border-radius:5px;"></th>');
 
         //Insercion de nuevas filas con respectivas columnas en la tabla de peticiones de recursos al sistema
         $("#tabla_peticiones").append('<tr id="ftp_acr"></tr>');
         $("#ftp_acr").append("<th>Acrobat Reader</th>");
-        $("#ftp_acr").append('<th><input class="form-control input-sm" type="text" id="ftp_acr0" style="border-radius:5px;"></th>');
+        $("#ftp_acr").append('<th style="color:#00a65a;">Activo</th>');
         $("#ftp_acr").append('<th><input class="form-control input-sm" type="text" id="ftp_acr1" style="border-radius:5px;"></th>');
         $("#ftp_acr").append('<th><input class="form-control input-sm" type="text" id="ftp_acr2" style="border-radius:5px;"></th>');
         $("#ftp_acr").append('<th><input class="form-control input-sm" type="text" id="ftp_acr3" style="border-radius:5px;"></th>');
         $("#ftp_acr").append('<th><input class="form-control input-sm" type="text" id="ftp_acr4" style="border-radius:5px;"></th>');
+        $("#ftp_acr").append('<th><input class="form-control input-sm" type="text" id="ftp_acr5" style="border-radius:5px;"></th>');
         procesos_flags[13] = 1;
         ++inf_proc.numProc_tabla;
         inf_proc.nom_procs.push("acr");
@@ -584,23 +612,25 @@ $(document).ready(function(){
       if (procesos_flags[14] === 0) {
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
-        $("#btn_ges").append('<i id="activ_ges" class="fa fa-circle text-success" style="margin-left:35px;"></i>');
+        $("#btn_ges").append('<i id="activ_ges" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
         $("#tabla_asignados").append('<tr id="fta_ges"></tr>');
         $("#fta_ges").append("<th>Gestion de la bateria</th>");
-        $("#fta_ges").append('<th><input class="form-control input-sm" type="text" id="fta_ges0" style="border-radius:5px;"></th>');
+        $("#fta_ges").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_ges").append('<th><input class="form-control input-sm" type="text" id="fta_ges1" style="border-radius:5px;"></th>');
         $("#fta_ges").append('<th><input class="form-control input-sm" type="text" id="fta_ges2" style="border-radius:5px;"></th>');
         $("#fta_ges").append('<th><input class="form-control input-sm" type="text" id="fta_ges3" style="border-radius:5px;"></th>');
         $("#fta_ges").append('<th><input class="form-control input-sm" type="text" id="fta_ges4" style="border-radius:5px;"></th>');
+        $("#fta_ges").append('<th><input class="form-control input-sm" type="text" id="fta_ges5" style="border-radius:5px;"></th>');
 
         //Insercion de nuevas filas con respectivas columnas en la tabla de peticiones de recursos al sistema
         $("#tabla_peticiones").append('<tr id="ftp_ges"></tr>');
         $("#ftp_ges").append("<th>Gestion de la bateria</th>");
-        $("#ftp_ges").append('<th><input class="form-control input-sm" type="text" id="ftp_ges0" style="border-radius:5px;"></th>');
+        $("#ftp_ges").append('<th style="color:#00a65a;">Activo</th>');
         $("#ftp_ges").append('<th><input class="form-control input-sm" type="text" id="ftp_ges1" style="border-radius:5px;"></th>');
         $("#ftp_ges").append('<th><input class="form-control input-sm" type="text" id="ftp_ges2" style="border-radius:5px;"></th>');
         $("#ftp_ges").append('<th><input class="form-control input-sm" type="text" id="ftp_ges3" style="border-radius:5px;"></th>');
         $("#ftp_ges").append('<th><input class="form-control input-sm" type="text" id="ftp_ges4" style="border-radius:5px;"></th>');
+        $("#ftp_ges").append('<th><input class="form-control input-sm" type="text" id="ftp_ges5" style="border-radius:5px;"></th>');
         procesos_flags[14] = 1;
         ++inf_proc.numProc_tabla;
         inf_proc.nom_procs.push("ges");

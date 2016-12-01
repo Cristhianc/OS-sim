@@ -103,7 +103,6 @@
       </ul>
     </section>
   </aside>
-
   <div class="content-wrapper">
     <section class="content-header">
       <h1>
@@ -128,95 +127,128 @@
     </section>
 
     <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <!-- Tabla de los recursos del sistema disponibles acumulados -->
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Recursos del sistema disponibles acumulados</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>CPU's</th>
+                  <th>Impresoras</th>
+                  <th>Camara web</th>
+                  <th>Memoria RAM</th>
+                  <th>Archivos</th>
+                </tr>
+                <tr>
+                  <th><input class="form-control input-sm" type="text" id="rdcol0" style="border-radius:5px;"></th>
+                  <th><input class="form-control input-sm" type="text" id="rdcol1" style="border-radius:5px;"></th>
+                  <th><input class="form-control input-sm" type="text" id="rdcol2" style="border-radius:5px;"></th>
+                  <th><input class="form-control input-sm" type="text" id="rdcol3" style="border-radius:5px;"></th>
+                  <th><input class="form-control input-sm" type="text" id="rdcol4" style="border-radius:5px;"></th>
+                </tr>
+                </thead>
+                <tbody id="tabla_disponibles">
+                </tbody>
+                <tfoot>
 
-      <!-- Tabla de los recursos del sistema disponibles acumulados -->
-      <div class="box">
-        <div class="box-header">
-          <h3 class="box-title">Recursos del sistema disponibles acumulados</h3>
-        </div>
-        <!-- /.box-header -->
-        <div class="box-body">
-          <table id="example1" class="table table-bordered table-striped">
-            <thead>
-            <tr>
-              <th>CPU's</th>
-              <th>Impresoras</th>
-              <th>Camara web</th>
-              <th>Memoria RAM</th>
-              <th>Archivos</th>
-            </tr>
-            <tr>
-              <th><input class="form-control input-sm" type="text" id="rdcol0" style="border-radius:5px;"></th>
-              <th><input class="form-control input-sm" type="text" id="rdcol1" style="border-radius:5px;"></th>
-              <th><input class="form-control input-sm" type="text" id="rdcol2" style="border-radius:5px;"></th>
-              <th><input class="form-control input-sm" type="text" id="rdcol3" style="border-radius:5px;"></th>
-              <th><input class="form-control input-sm" type="text" id="rdcol4" style="border-radius:5px;"></th>
-            </tr>
-            </thead>
-            <tbody id="tabla_disponibles">
-            </tbody>
-            <tfoot>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+          <!--Tabla de recursos asignados inicialmente a los procesos-->
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Recursos del sistema asignados inicialmente</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Nombres de los procesos</th>
+                  <th>CPU's</th>
+                  <th>Impresoras</th>
+                  <th>Camara web</th>
+                  <th>Memoria RAM</th>
+                  <th>Archivos</th>
+                  <th>Estado final</th>
+                </tr>
+                </thead>
+                <tbody id="tabla_asignados">
+                </tbody>
+                <tfoot>
 
-            </tfoot>
-          </table>
-        </div>
-      </div>
-      <!--Tabla de recursos asignados inicialmente a los procesos-->
-      <div class="box">
-        <div class="box-header">
-          <h3 class="box-title">Recursos del sistema asignados inicialmente</h3>
-        </div>
-        <!-- /.box-header -->
-        <div class="box-body">
-          <table id="example1" class="table table-bordered table-striped">
-            <thead>
-            <tr>
-              <th>Nombres de los procesos</th>
-              <th>CPU's</th>
-              <th>Impresoras</th>
-              <th>Camara web</th>
-              <th>Memoria RAM</th>
-              <th>Archivos</th>
-              <th>Estado final</th>
-            </tr>
-            </thead>
-            <tbody id="tabla_asignados">
-            </tbody>
-            <tfoot>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+          <!-- Peticiones de recursos de los procesos del sistema -->
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Peticiones de recursos de los procesos del sistema</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Nombres de los procesos</th>
+                  <th>CPU's</th>
+                  <th>Impresoras</th>
+                  <th>Camara web</th>
+                  <th>Memoria RAM</th>
+                  <th>Archivos</th>
+                </tr>
+                </thead>
+                <tbody id="tabla_peticiones">
+                </tbody>
+                <tfoot>
 
-            </tfoot>
-          </table>
-        </div>
-      </div>
-      <!-- Peticiones de recursos de los procesos del sistema -->
-      <div class="box">
-        <div class="box-header">
-          <h3 class="box-title">Peticiones de recursos de los procesos del sistema</h3>
-        </div>
-        <!-- /.box-header -->
-        <div class="box-body">
-          <table id="example1" class="table table-bordered table-striped">
-            <thead>
-            <tr>
-              <th>Nombres de los procesos</th>
-              <th>CPU's</th>
-              <th>Impresoras</th>
-              <th>Camara web</th>
-              <th>Memoria RAM</th>
-              <th>Archivos</th>
-            </tr>
-            </thead>
-            <tbody id="tabla_peticiones">
-            </tbody>
-            <tfoot>
+                </tfoot>
+              </table>
+            </div>
+          </div>
 
-            </tfoot>
-          </table>
+          <div class="box">
+                <div class="box-header">
+                  <h3 class="box-title">Data Table With Full Features</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                  <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                    <tr>
+                      <th>Rendering engine</th>
+                      <th>Browser</th>
+                      <th>Platform(s)</th>
+                      <th>Engine version</th>
+                      <th>CSS grade</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Trident</td>
+                        <td>Internet
+                          Explorer 4.0
+                        </td>
+                        <td>Win 95+</td>
+                        <td> 4</td>
+                        <td>X</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+          </div>
         </div>
       </div>
     </section>
-  </div>
-
+  </div> -->
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
       proRes-admin SIM
@@ -274,29 +306,13 @@
       <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
       <!-- /.tab-pane -->
       <!-- Settings tab content -->
-      <div class="tab-pane" id="control-sidebar-settings-tab">
-        <form method="post">
-          <h3 class="control-sidebar-heading">General Settings</h3>
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Report panel usage
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-
-            <p>
-              Some information about this general settings option
-            </p>
-          </div>
-        </form>
-      </div>
+      
     </div>
   </aside>
   <div class="control-sidebar-bg"></div>
 </div>
 
 <!-- SCRIPTS JS REQUERIDOS -->
-<!-- jQuery 3.3.1 js -->
 <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -310,5 +326,27 @@
 <script src="dist/js/manejadorGUI.js"></script>
 <!-- Script que maneja el algoritmo de deteccion de interbloqueos -->
 <script src="dist/js/bankerAlgorithm.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<!-- DataTables -->
+<!-- SlimScroll -->
+<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="plugins/fastclick/fastclick.js"></script>
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
+<script>
+  $(function () {
+    $("#example1").DataTable();
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false
+    });
+  });
+</script>
 </body>
 </html>
