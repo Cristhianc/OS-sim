@@ -3,21 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Data Tables</title>
+  <title>proRes-admin</title>
   <!-- Le indica al navegador que sea responsive con el ancho de pantalla -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="dist/font-awesome/css/font-awesome.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="dist/ionicons-2.0.1/css/ionicons.css">
   <!-- DataTables -->
   <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">
   <!-- Estilo de la plantilla -->
   <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
   <!-- Skins de la pagina -->
   <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+  <!-- Estilos especiales para algunos componentes del Simulador -->
+  <link rel="stylesheet" href="dist/css/ossim.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -26,8 +24,9 @@
   <![endif]-->
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
-<!-- Contenedor padre de toda la pagina -->
+<!-- Caja envoltorio padre de toda la pagina. -->
 <div class="wrapper">
+  <!-- Cabecera  de la caja envoltorio padre de toda la pagina. -->
   <header class="main-header">
     <!-- Logo y titulo en la barra lateral izquierda. -->
     <a class="logo">
@@ -48,7 +47,6 @@
       <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
         <span class="sr-only">Toggle navigation</span>
       </a>
-
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <!-- Boton llave para expandir la barra lateral derecha -->
@@ -59,271 +57,260 @@
       </div>
     </nav>
   </header>
-  <!-- Columna del lateral izquierdo, continene el logo y la barra lateral. -->
+  <!-- /Cabecera  de la caja envoltorio padre de toda la pagina. -->
+
+  <!-- Columna del lateral izquierda, continene el logo y la barra lateral. -->
   <aside class="main-sidebar">
     <section class="sidebar">
+      <!-- Listado de los procesos que se pueden ejecutar -->
       <ul class="sidebar-menu">
         <li class="header"><strong>PROGRAMAS DEL SISTEMA</strong></li>
-        <!-- Procesos a manejar en el simulador -->
         <li>
-          <a id="btn_exp"  ><i class="glyphicon glyphicon-folder-open"></i> <span id="proceso_1">Explorador</span></a>
+          <a id="btn_exp"><i class="glyphicon glyphicon-folder-open"></i><span id="proceso_1">Explorador</span></a>
         </li>
         <li>
-          <a id="btn_chr"  ><i class="glyphicon glyphicon-globe"></i><span>Chrome</span></a>
+          <a id="btn_chr"><i class="glyphicon glyphicon-globe"></i><span>Chrome</span></a>
         </li>
         <li>
-          <a id="btn_ter"  ><i class="glyphicon glyphicon-console"></i> <span>Terminal del sistema</span></a>
+          <a id="btn_ter"><i class="glyphicon glyphicon-console"></i><span>Term. del sistema</span></a>
         </li>
         <li>
-          <a id="btn_rep"  ><i class="glyphicon glyphicon-headphones"></i> <span>Reprod. Multimedia</span></a>
+          <a id="btn_rep"><i class="glyphicon glyphicon-headphones"></i> <span>Reprod. Multimedia</span></a>
         </li>
         <li>
-          <a id="btn_not"  ><i class="glyphicon glyphicon-file"></i> <span>Notepad++</span></a>
+          <a id="btn_not"><i class="glyphicon glyphicon-file"></i><span>Notepad++</span></a>
         </li>
         <li>
-          <a id="btn_adm"  ><i class="glyphicon glyphicon-list-alt"></i> <span>Admin. de tareas</span></a>
+          <a id="btn_adm"><i class="glyphicon glyphicon-list-alt"></i> <span>Admin. de tareas</span></a>
         </li>
         <li>
-          <a id="btn_sky"  ><i class="glyphicon glyphicon-user"></i> <span>Skype</span></a>
+          <a id="btn_sky"><i class="glyphicon glyphicon-user"></i><span>Skype</span></a>
         </li>
         <li>
-          <a id="btn_han"  ><i class="glyphicon glyphicon-header"></i> <span>Hangouts</span></a>
+          <a id="btn_han"><i class="glyphicon glyphicon-header"></i><span>Hangouts</span></a>
         </li>
         <li>
-          <a id="btn_win"  ><i class="glyphicon glyphicon-compressed"></i> <span>Winrar</span></a>
+          <a id="btn_win"><i class="glyphicon glyphicon-compressed"></i> <span>Winrar</span></a>
         </li>
         <li>
-          <a id="btn_apa"  ><i class="glyphicon glyphicon-leaf"></i> <span>Apache Server</span></a>
+          <a id="btn_apa"><i class="glyphicon glyphicon-leaf"></i><span>Apache Server</span></a>
         </li>
         <li>
-          <a id="btn_wha"  ><i class="glyphicon glyphicon-comment"></i> <span>Whatsapp</span></a>
+          <a id="btn_wha"><i class="glyphicon glyphicon-comment"></i><span>Whatsapp</span></a>
         </li>
         <li>
-          <a id="btn_git"  ><i class="glyphicon glyphicon-transfer"></i> <span>Git</span></a>
+          <a id="btn_git"><i class="glyphicon glyphicon-transfer"></i><span>Git</span></a>
         </li>
         <li>
-          <a id="btn_cal"  ><i class="glyphicon glyphicon-pencil"></i> <span>Calculadora</span></a>
+          <a id="btn_cal"><i class="glyphicon glyphicon-pencil"></i><span>Calculadora</span></a>
         </li>
         <li>
-          <a id="btn_acr"  ><i class="glyphicon glyphicon-text-background"></i> <span>Acrobat Reader</span></a>
+          <a id="btn_acr"><i class="glyphicon glyphicon-text-background"></i><span>Acrobat Reader</span></a>
         </li>
         <li>
-          <a id="btn_ges"  ><i class="glyphicon glyphicon-scale"></i> <span>Gestion de la bateria</span></a>
+          <a id="btn_ges"><i class="glyphicon glyphicon-scale"></i><span>Gest. de bateria</span></a>
         </li>
       </ul>
+      <!-- /Listado de los procesos que se pueden ejecutar -->
     </section>
-    <!-- /.sidebar -->
   </aside>
+  <!-- /Columna del lateral izquierda, continene el logo y la barra lateral. -->
 
-  <!-- Envoltorio de contenido, posee el contenido de la pagina. -->
+  <!-- Caja envoltorio del contenido principal de la pagina. -->
   <div class="content-wrapper">
-    <!-- Cabecera de contenido (Cabecera de pagina) -->
+    <!-- Cabecera de la caja envoltorio del contenido principal de la pagina -->
     <section class="content-header">
       <h1>
-        <i>Deteccion de interbloqueos</i>
-        <small>Mas de una instancia de un tipo de recurso</small>
+        <i>Administrador de recursos del Sistema Operativo</i>
+        <small>Del tipo multiproceso-monohilo</small>
       </h1>
-      <!-- Descripcion mas amplia de la aplicacion de esta funcionalidad -->
-      <div class="callout callout-info" style="margin-top:25px;">
-        <h4><strong>Descripcion del programa</strong></h4>
+      <!-- Botones que para ejecutar unos ejemplos de simulacion -->
+      <a id="btn_ejem1" class="btn btn-app">
+        <i class="glyphicon glyphicon-flag"></i>
+        <label>Ejemplo (1)</label>
+      </a>
+      <a id="btn_ejem2" class="btn btn-app">
+        <i class="glyphicon glyphicon-flag"></i>
+        <label>Ejemplo (2)</label>
+      </a>
+      <a id="btn_ejem3" class="btn btn-app">
+        <i class="glyphicon glyphicon-flag"></i>
+        <label>Ejemplo (3)</label>
+      </a>
+      <!-- /Botones que para ejecutar unos ejemplos de simulacion -->
 
-        <p>   Detector de estados seguros o inseguros de un sistema, asi como los interbloqueos dentro del mismo, con una interfaz
-        grafica manejable y configurable hasta cierto limite. Muestra las instancias de cada tipo de recurso y los diferentes
-        nombres de los procesos. El orden de ejecucion de cada proceso es de arriba hacia abajo.</p>
-      </div>
-      <!-- Boton que ejecuta el algoritmo de deteccion de interbloqueos -->
-      <a id="btn_ibalg" class="btn btn-app" style="margin-top:20px; margin-left:10px;">
-                <i class="glyphicon glyphicon-play" style="margin-top:-5px; padding-bottom:3px;"></i>
-              <label>Ejecutar Algoritmo</label>
+      <!-- Boton para limpiar los registros que seran implementados en un futuro -->
+      <a onclick="limpiarCampos()" id="btn_limpiar" class="btn btn-app">
+        <i class="glyphicon glyphicon-erase"></i>
+        <label>Limpiar Registro</label>
       </a>
-      <a onclick="limpiarCampos()" id="btn_ibalg" class="btn btn-app" style="margin-top:20px; margin-left:10px;">
-                <i class="glyphicon glyphicon-erase" style="margin-top:-5px; padding-bottom:3px;"></i>
-                <label>Limpiar Registro</label>
-      </a>
+      <!-- /Boton para limpiar los registros que seran implementados en un futuro -->
     </section>
+    <!-- /Cabecera de la caja envoltorio del contenido principal de la pagina -->
 
-    <!-- Contenido principal de la pagina -->
+    <!-- Contenido principal de la pagina que contiene las tablas y demas elementos.-->
     <section class="content">
-      <!-- Contenedor fila de las pestañas tipo Tabla -->
+      <!-- Fila 1 del contenido Principal. -->
       <div class="row">
-        <div class="col-xs-12">
-          <div class="nav-tabs-custom">
-            <ul class="nav nav-tabs">
-              <li class="active">
-                <a href="#tab_1" data-toggle="tab" aria-expanded="true">Disponibles</a>
-              </li>
-              <li>
-                <a href="#tab_2" data-toggle="tab" aria-expanded="true">Asignados</a>
-              </li>
-              <li>
-                <a href="#tab_3" data-toggle="tab" aria-expanded="true">Peticiones</a>
-              </li>
-            </ul>
-            <div class="tab-content">
-              <div class="tab-pane active" id="tab_1">
-                <div class="box">
-                  <div class="box-header">
-                    <h3 class="box-title"><strong>Recursos Disponibles Actualmente (RDA)</strong></h3>
-                  </div>
-                  <!-- /.box-header -->
-                  <div class="box-body">
-                    <table id="example0" class="table table-bordered table-hover">
-                      <thead>
-                        <tr>
-                          <th>CPU's</th>
-                          <th>Memoria</th>
-                          <th>Disco</th>
-                          <th>Camara Web</th>
-                          <th>Impresora</th>
-                        </tr>
-                      </thead>
-                      <tbody id="tabla_disponibles">
-                        <th><input class="form-control input-sm" type="text" id="rdcol0" style="border-radius:5px;" value="0"></th>
-                        <th><input class="form-control input-sm" type="text" id="rdcol1" style="border-radius:5px;" value="0"></th>
-                        <th><input class="form-control input-sm" type="text" id="rdcol2" style="border-radius:5px;" value="0"></th>
-                        <th><input class="form-control input-sm" type="text" id="rdcol3" style="border-radius:5px;" value="0"></th>
-                        <th><input class="form-control input-sm" type="text" id="rdcol4" style="border-radius:5px;" value="0"></th>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane" id="tab_2">
-                <div class="box">
-                  <div class="box-header">
-                    <h3 class="box-title"><strong>Recursos Asignados Inicialmente (RAI)</strong></h3>
-                  </div>
-                  <!-- /.box-header -->
-                  <div class="box-body">
-                    <table id="example1" class="table table-bordered table-hover">
-                      <thead>
-                        <tr>
-                          <th>Procesos</th>
-                          <th>Estado</th>
-                          <th>CPU's</th>
-                          <th>Memoria</th>
-                          <th>Disco</th>
-                          <th>Camara Web</th>
-                          <th>Impresora</th>
-                        </tr>
-                      </thead>
-                      <tbody id="tabla_asignados">
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane" id="tab_3">
-                <div class="box">
-                  <div class="box-header">
-                    <h3 class="box-title"><strong>Recursos Solicitados por Peticion (RSP)</strong></h3>
-                  </div>
-                  <!-- /.box-header -->
-                  <div class="box-body">
-                    <table id="example2" class="table table-bordered table-hover">
-                      <thead>
-                        <tr>
-                          <th>Procesos</th>
-                          <th>Estado</th>
-                          <th>CPU's</th>
-                          <th>Memoria</th>
-                          <th>Disco</th>
-                          <th>Camara Web</th>
-                          <th>Impresora</th>
-                        </tr>
-                      </thead>
-                      <tbody id="tabla_peticiones">
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- /Contenedor fila de las pestañas tipo Tabla -->
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="box">
-            <div class="box-header">
-              <h3 class="box-title"><strong>Representacion de la memoria principal (RAM)</strong></h3>
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-              </div>
+        <!-- Columna de tamaño 8 de la fila 1. -->
+        <div class="col-xs-8">
+          <!-- Caja que arropa a todo el contenido de la columna de tamaño 8 de la fila 1. -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title"><strong>Tablas principales de la gestion del Sistema Operativo</strong></h3>
             </div>
             <div class="box-body">
-              <table id="example0" class="table table-bordered table-hover">
+              <!-- Caja contenedora principal de las pestañas con su respectivo contenido. -->
+              <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs">
+                  <li class="active">
+                    <a href="#tab_1" data-toggle="tab" aria-expanded="true">Procesos</a>
+                  </li>
+                  <li>
+                    <a href="#tab_2" data-toggle="tab" aria-expanded="true">Asignaciones</a>
+                  </li>
+                  <li>
+                    <a href="#tab_3" data-toggle="tab" aria-expanded="true">Recursos</a>
+                  </li>
+                </ul>
+                <!-- Contenido de la caja de las pestañas. -->
+                <div class="tab-content">
+                  <!-- Contenido de la pestaña 1: tabla_IPE.s -->
+                  <div class="tab-pane active" id="tab_1">
+                    <h3 class="box-title"><strong>Informacion de los Procesos en Ejecucion (IPE)</strong></h3>
+                    <table id="tabla_IPE" class="table table-bordered table-hover">
+                      <thead>
+                        <tr>
+                          <th >Procesos</th>
+                          <th >PID</th>
+                          <th >Estado</th>
+                          <th >Registro Base</th>
+                          <th >Registro Limite</th>
+                          <th >Recursos E/S</th>
+                          <th >CPU's</th>
+                          <th >Memoria</th>
+                        </tr>
+                      </thead>
+                      <tbody id="cont_IPE">
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /Contenido de la pestaña 1: tabla_IPE. -->
+
+                  <!-- Contenido de la pestaña 2: tabla_DAPE. -->
+                  <div class="tab-pane" id="tab_2">
+                    <h3 class="box-title"><strong>Datos de Asignacion a los Procesos que seran Ejecutados (DAPE)</strong></h3>
+                    <table id="tabla_DAPE" class="table table-bordered table-hover">
+                      <thead>
+                        <tr>
+                          <th >Procesos</th>
+                          <th >Recursos E/S</th>
+                          <th >CPU's</th>
+                          <th >Memoria</th>
+                        </tr>
+                      </thead>
+                      <tbody id="cont_DAPE">
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /Contenido de la pestaña 2: tabla_DAPE. -->
+
+                  <!-- Contenido de la pestaña 3: tabla_RES. -->
+                  <div class="tab-pane" id="tab_3">
+                    <h3 class="box-title"><strong>Recursos de Entrada y Salida (RES)</strong></h3>
+                    <table id="tabla_RES" class="table table-bordered table-hover">
+                      <thead>
+                        <tr id="ftres_0">
+                          <th >Procesos</th>
+                        </tr>
+                      </thead>
+                      <tbody id="cont_RES">
+                      </tbody>
+                    </table>
+                    <button type="button" id="btn_nrec" class="btn btn-primary" data-toggle="modal" data-target="#rec_modal">
+                      <i class="glyphicon glyphicon-plus"></i>  Nuevo Recurso
+                    </button>
+                  </div>
+                  <!-- /Contenido de la pestaña 3: tabla_RES. -->
+                </div>
+              <!-- /Contenido de la caja de las pestañas. -->
+              </div>
+              <!-- /Caja contenedora principal de las pestañas con su respectivo contenido. -->
+            </div>
+          </div>
+          <!-- Caja que arropa a todo el contenido de la columna de tamaño 8 de la fila 1. -->
+        </div>
+        <!-- /Columna de tamaño 8 de la fila 1. -->
+
+        <!-- Columna de tamaño 4 de la fila 1. -->
+        <div class="col-xs-4">
+          <!-- Caja contenedora de la tabla MP. -->
+          <div class="box box-primary">
+            <div class="box-header with-border" style="text-align:center;">
+              <h3 class="box-title"><strong>Memoria Principal (MP)</strong></h3>
+            </div>
+            <div class="box-body">
+              <table id="tabla_MP" class="table table-bordered table-hover">
                 <thead>
                   <tr>
-                    <th>Procesos</th>
-                    <th>bit</th>
-                    <th>bit</th>
-                    <th>bit</th>
-                    <th>bit</th>
-                    <th>bit</th>
-                    <th>bit</th>
-                    <th>bit</th>
-                    <th>bit</th>
-                    <th>bit</th>
-                    <th>bit</th>
-                    <th>bit</th>
-                    <th>bit</th>
-                    <th>bit</th>
-                    <th>bit</th>
-                    <th>bit</th>
-                    <th>bit</th>
-                    <th>bit</th>
-                    <th>bit</th>
-                    <th>bit</th>
-                    <th>bit</th>
+                    <th >DIR. FISICA</th>
+                    <th >PARTICIONES DE LA MP</th>
+                    <th >TAMAÑO</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody id="cont_MP">
                 </tbody>
-                <tfoot>
-                  <tr>
-                    <th>Cantidad de bits</th>
-                    <th>2^19</th>
-                    <th>2^18</th>
-                    <th>2^17</th>
-                    <th>2^16</th>
-                    <th>2^15</th>
-                    <th>2^14</th>
-                    <th>2^13</th>
-                    <th>2^12</th>
-                    <th>2^11</th>
-                    <th>2^10</th>
-                    <th>2^9</th>
-                    <th>2^8</th>
-                    <th>2^7</th>
-                    <th>2^6</th>
-                    <th>2^5</th>
-                    <th>2^4</th>
-                    <th>2^3</th>
-                    <th>2^2</th>
-                    <th>2^1</th>
-                    <th>2^0</th>
-                  </tr>
-                </tfoot>
               </table>
             </div>
           </div>
+          <!-- /Caja contenedora de la tabla MP. -->
+        </div>
+        <!-- /Columna de tamaño 4 de la fila 1 -->
+      </div>
+    <!-- /Fila 1 del contenido Principal. -->
+    </section>
+    <!-- /Contenido principal de la pagina que contiene las tablas y demas elementos.-->
+
+    <!-- Ventana Modal introducida al agregar un nuevo recurso de E/S al sistema. -->
+    <div id="rec_modal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+      <div class="modal-dialog modal-sm" role="document" style="margin-top:200px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title"><strong>Nuevo Recurso</strong></h4>
+          </div>
+          <div class="modal-body">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-text-size"></i></span>
+              <input type="email" id="rec_nom" class="form-control" placeholder="Nombre">
+            </div>
+            <br>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-asterisk"></i></span>
+              <input type="email" id="rec_cant" class="form-control" placeholder="Cantidad">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cerrar</button>
+            <button type="button" id="btn_tres" class="btn btn-primary">Insertar</button>
+          </div>
         </div>
       </div>
-    </section>
-    <!-- Contenido principal de la pagina -->
+    </div>
+    <!-- /Ventana Modal introducida al agregar un nuevo recurso de E/S al sistema. -->
   </div>
-  <!-- /.content-wrapper -->
+  <!-- /Caja envoltorio del contenido principal de la pagina. -->
 
-  <!-- Pie de pagina del contenido principal -->
+  <!-- Pie de pagina de la caja envoltorio del contenido principal de la pagina. -->
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
       <b>Version</b> 1.0
     </div>
-    <strong>Copyright &copy; 2016 <a  >Crishtian Caicedo</a>.</strong> Todos los derechos reservados.
+    <strong>Copyright &copy; 2016 <a>Crishtian Caicedo</a>.</strong> Todos los derechos reservados.
   </footer>
-  <!-- /Pie de pagina del contenido principal -->
+  <!-- /Pie de pagina de la caja envoltorio del contenido principal de la pagina. -->
 
   <!-- Barra lateral de control -->
   <aside class="control-sidebar control-sidebar-dark">
@@ -344,13 +331,15 @@
     <!-- /Hojas pestaña -->
   </aside>
   <!-- /.Barra lateral de control -->
-  <!-- Add the sidebar's background. This div must be placed
-       immediately after the control sidebar -->
+  <!-- Caja complementativa para la barra de control lateral derecha. -->
   <div class="control-sidebar-bg"></div>
+  <!-- /Caja complementativa para la barra de control lateral derecha. -->
 </div>
-<!-- /Contenedor padre de toda la pagina -->
+<!-- /Caja envoltorio padre de toda la pagina. -->
 
-<!-- SCRIPTS JS REQUERIDOS -->
+<!--  +++++++++++++++++++++++++ -->
+<!--  | SCRIPTS JS REQUERIDOS | -->
+<!--  ++++++++++++++++++++++++  -->
 <!-- jQuery 2.2.3 -->
 <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
@@ -370,5 +359,11 @@
 <!-- Script que maneja el algoritmo de deteccion de interbloqueos -->
 <script src="dist/js/bankerAlgorithm.js"></script>
 <!-- Script para poder implementar las tablas con caracteristicas completas -->
+<script src="dist/js/sleeper.js"></script>
+<!-- DataTables -->
+<script src="plugins/datatables/jquery.dataTables.js"></script>
+<script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
+<!-- Script para inicializar elementos de la GUI y asi no realizar una sobrecarga en codigo HTML5. -->
+<script src="dist/js/initGUI.js"></script>
 </body>
 </html>

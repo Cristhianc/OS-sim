@@ -1,8 +1,13 @@
 function sleep(milliseconds) {
- var start = new Date().getTime();
- for (var i = 0; i < 1e7; i++) {
-  if ((new Date().getTime() - start) > milliseconds) {
-   break;
-  }
- }
+    var date = new Date();
+    var startDate = date.getTime();
+    var a = 1;
+    var b = 0;
+    while (a !== 0) {
+        date = new Date();
+        if ((date.getTime() - startDate) >= milliseconds) {
+            a = 0;
+        }
+        b++;
+    }
 };

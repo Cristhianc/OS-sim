@@ -1,0 +1,70 @@
+/* Bordes que delimitan el area de la memoria principal por encima, debajo
+y al medio de una particion llena.*/
+#tabla_MP .top-ran-fill {
+  border-top: 3px solid #3c8dbc;
+  border-left: 3px solid #3c8dbc;
+  border-right: 3px solid #3c8dbc;
+  background-color:#80ced6;
+}
+#tabla_MP .mid-ranura-fill {
+  border-left: 3px solid #3c8dbc;
+  border-right: 3px solid #3c8dbc;
+  background-color:#80ced6;
+}
+#tabla_MP .bottom-ranura-fill {
+  border-bottom: 3px solid #3c8dbc;
+  border-left: 3px solid #3c8dbc;
+  border-right: 3px solid #3c8dbc;
+  background-color:#80ced6;
+}
+
+/* Bordes que delimitan el area de la memoria principal por el medio y debajo
+de una particion que esta fragmentada.*/
+#tabla_MP .mid-ranura-fill {
+  border-left: 3px solid #3c8dbc;
+  border-right: 3px solid #3c8dbc;
+  background-color:#d5f4e6;
+}
+
+/* Bordes que delimitan el area de la memoria principal por encima, debajo
+y al medio de una particion vacia.*/
+#tabla_MP .top-ran-fill {
+  border-top: 3px solid #3c8dbc;
+  border-left: 3px solid #3c8dbc;
+  border-right: 3px solid #3c8dbc;
+}
+#tabla_MP .mid-ranura-fill {
+  border-left: 3px solid #3c8dbc;
+  border-right: 3px solid #3c8dbc;
+}
+#tabla_MP .bottom-ranura-fill {
+  border-bottom: 3px solid #3c8dbc;
+  border-left: 3px solid #3c8dbc;
+  border-right: 3px solid #3c8dbc;
+}
+
+/* Alinea el texto de todas las tablas.*/
+#tabla_IPE th, #tabla_DAPE th,
+#tabla_RES th, #tabla_MP th {
+  text-align: center;
+}
+
+/*Acomoda el boton que agrega un nuevo recurso de entrada y salida.*/
+#btn_nrec {
+  margin-top:30px;
+  margin-bottom:5px;
+  float:right;
+}
+
+/* Acomoda los botones que brindan funcionalidad al simulador. Los que estan
+colocados encima de las tablas.*/
+#btn_ejem1, #btn_ejem2,
+#btn_ejem3, #btn_limpiar {
+  margin-top:20px;
+  margin-left:10px;
+}
+#btn_ejem1 > i, #btn_ejem2 > i,
+#btn_ejem3 > i, #btn_limpiar > i {
+  margin-top:-5px;
+  padding-bottom:3px;
+}

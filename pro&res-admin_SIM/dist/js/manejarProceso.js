@@ -61,6 +61,11 @@ Entradas en la funcion principal de este Javascript:
                                             cantidad de recursos j del sistema.
 */
 var procesos_flags = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+
+var proceso = {
+  //flag = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+};
+
 /*Objeto que contiene la informacion de la cantidad de procesos activos y sus
 nombres, ademas de una funcion para agregar o sacar el nombre de algun proceso*/
 var inf_proc = {
@@ -79,26 +84,28 @@ $(document).ready(function(){
     if($(event.target).attr('id')=='btn_exp'){
       if (procesos_flags[0] === 0) {
 
-        //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
-        $("#btn_exp").append('<i id="activ_exp" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
-        $("#tabla_asignados").append('<tr id="fta_exp"></tr>');
+        /*Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
+
+        $("#tabla_procesos").append('<tr id="fta_exp"></tr>');
         $("#fta_exp").append("<th>Explorador</th>");
-        $("#fta_exp").append('<th style="color:#00a65a;">Activo</th>');
+        $("#fta_exp").append('<th><input class="form-control input-sm" type="text" id="ftp_exp0" style="border-radius:5px;"></th>');
         $("#fta_exp").append('<th><input class="form-control input-sm" type="text" id="fta_exp1" style="border-radius:5px;"></th>');
         $("#fta_exp").append('<th><input class="form-control input-sm" type="text" id="fta_exp2" style="border-radius:5px;"></th>');
         $("#fta_exp").append('<th><input class="form-control input-sm" type="text" id="fta_exp3" style="border-radius:5px;"></th>');
         $("#fta_exp").append('<th><input class="form-control input-sm" type="text" id="fta_exp4" style="border-radius:5px;"></th>');
-        $("#fta_exp").append('<th><input class="form-control input-sm" type="text" id="fta_exp5" style="border-radius:5px;"></th>');
+        $("#fta_exp").append('<th><input class="form-control input-sm" type="text" id="fta_exp5" style="border-radius:5px;"></th>');*/
 
         //Insercion de nuevas filas con respectivas columnas en la tabla de peticiones de recursos al sistema
-        $("#tabla_peticiones").append('<tr id="ftp_exp"></tr>');
+        $("#btn_exp").append('<i id="activ_exp" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
+        $("#tabla_procesos").append('<tr id="ftp_exp"></tr>');
         $("#ftp_exp").append("<th>Explorador</th>");
-        $("#ftp_exp").append('<th style="color:#00a65a;">Activo</th>');
-        $("#ftp_exp").append('<th><input class="form-control input-sm" type="text" id="ftp_exp1" style="border-radius:5px;"></th>');
-        $("#ftp_exp").append('<th><input class="form-control input-sm" type="text" id="ftp_exp2" style="border-radius:5px;"></th>');
-        $("#ftp_exp").append('<th><input class="form-control input-sm" type="text" id="ftp_exp3" style="border-radius:5px;"></th>');
+        $("#ftp_exp").append('<th><input class="form-control input-sm" type="text" id="ftp_exp0" style="border-radius:5px;"></th>');
+        $("#ftp_exp").append('<th id="ftp_exp1" style="text-align:center;">hola</th>');
+        $("#ftp_exp").append('<th id="ftp_exp2" style="text-align:center;">1200</th>');
+        $("#ftp_exp").append('<th id="ftp_exp3" style="text-align:center;">2500</th>');
         $("#ftp_exp").append('<th><input class="form-control input-sm" type="text" id="ftp_exp4" style="border-radius:5px;"></th>');
         $("#ftp_exp").append('<th><input class="form-control input-sm" type="text" id="ftp_exp5" style="border-radius:5px;"></th>');
+
         procesos_flags[0] = 1;
         ++inf_proc.numProc_tabla;
         inf_proc.nom_procs.push("exp");
@@ -108,6 +115,7 @@ $(document).ready(function(){
         $("#activ_exp").remove();
         $("#fta_exp").remove();
         $("#ftp_exp").remove();
+        //procesos_flags[0] = 0;
         procesos_flags[0] = 0;
         --inf_proc.numProc_tabla;
         inf_proc.sacarProceso_nom("exp");
@@ -119,7 +127,7 @@ $(document).ready(function(){
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
         $("#btn_chr").append('<i id="activ_chr" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
-        $("#tabla_asignados").append('<tr id="fta_chr"></tr>');
+        $("#tabla_procesos").append('<tr id="fta_chr"></tr>');
         $("#fta_chr").append("<th>Chrome</th>");
         $("#fta_chr").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_chr").append('<th><input class="form-control input-sm" type="text" id="fta_chr1" style="border-radius:5px;"></th>');
@@ -157,7 +165,7 @@ $(document).ready(function(){
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
         $("#btn_ter").append('<i id="activ_ter" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
-        $("#tabla_asignados").append('<tr id="fta_ter"></tr>');
+        $("#tabla_procesos").append('<tr id="fta_ter"></tr>');
         $("#fta_ter").append("<th>Terminal del sistema</th>");
         $("#fta_ter").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_ter").append('<th><input class="form-control input-sm" type="text" id="fta_ter1" style="border-radius:5px;"></th>');
@@ -195,7 +203,7 @@ $(document).ready(function(){
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
         $("#btn_rep").append('<i id="activ_rep" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
-        $("#tabla_asignados").append('<tr id="fta_rep"></tr>');
+        $("#tabla_procesos").append('<tr id="fta_rep"></tr>');
         $("#fta_rep").append("<th>Reproductor Multimedia</th>");
         $("#fta_rep").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_rep").append('<th><input class="form-control input-sm" type="text" id="fta_rep1" style="border-radius:5px;"></th>');
@@ -233,7 +241,7 @@ $(document).ready(function(){
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
         $("#btn_not").append('<i id="activ_not" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
-        $("#tabla_asignados").append('<tr id="fta_not"></tr>');
+        $("#tabla_procesos").append('<tr id="fta_not"></tr>');
         $("#fta_not").append("<th>Notepad++</th>");
         $("#fta_not").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_not").append('<th><input class="form-control input-sm" type="text" id="fta_not1" style="border-radius:5px;"></th>');
@@ -271,7 +279,7 @@ $(document).ready(function(){
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
         $("#btn_adm").append('<i id="activ_adm" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
-        $("#tabla_asignados").append('<tr id="fta_adm"></tr>');
+        $("#tabla_procesos").append('<tr id="fta_adm"></tr>');
         $("#fta_adm").append("<th>Administrador de tareas</th>");
         $("#fta_adm").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_adm").append('<th><input class="form-control input-sm" type="text" id="fta_adm1" style="border-radius:5px;"></th>');
@@ -309,7 +317,7 @@ $(document).ready(function(){
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
         $("#btn_sky").append('<i id="activ_sky" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
-        $("#tabla_asignados").append('<tr id="fta_sky"></tr>');
+        $("#tabla_procesos").append('<tr id="fta_sky"></tr>');
         $("#fta_sky").append("<th>Skype</th>");
         $("#fta_sky").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_sky").append('<th><input class="form-control input-sm" type="text" id="fta_sky1" style="border-radius:5px;"></th>');
@@ -347,7 +355,7 @@ $(document).ready(function(){
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
         $("#btn_han").append('<i id="activ_han" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
-        $("#tabla_asignados").append('<tr id="fta_han"></tr>');
+        $("#tabla_procesos").append('<tr id="fta_han"></tr>');
         $("#fta_han").append("<th>Hangouts</th>");
         $("#fta_han").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_han").append('<th><input class="form-control input-sm" type="text" id="fta_han1" style="border-radius:5px;"></th>');
@@ -385,7 +393,7 @@ $(document).ready(function(){
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
         $("#btn_win").append('<i id="activ_win" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
-        $("#tabla_asignados").append('<tr id="fta_win"></tr>');
+        $("#tabla_procesos").append('<tr id="fta_win"></tr>');
         $("#fta_win").append("<th>Winrar</th>");
         $("#fta_win").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_win").append('<th><input class="form-control input-sm" type="text" id="fta_win1" style="border-radius:5px;"></th>');
@@ -423,7 +431,7 @@ $(document).ready(function(){
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
         $("#btn_apa").append('<i id="activ_apa" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
-        $("#tabla_asignados").append('<tr id="fta_apa"></tr>');
+        $("#tabla_procesos").append('<tr id="fta_apa"></tr>');
         $("#fta_apa").append("<th>Apache Server</th>");
         $("#fta_apa").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_apa").append('<th><input class="form-control input-sm" type="text" id="fta_apa1" style="border-radius:5px;"></th>');
@@ -461,7 +469,7 @@ $(document).ready(function(){
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
         $("#btn_wha").append('<i id="activ_wha" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
-        $("#tabla_asignados").append('<tr id="fta_wha"></tr>');
+        $("#tabla_procesos").append('<tr id="fta_wha"></tr>');
         $("#fta_wha").append("<th>Whatsapp</th>");
         $("#fta_wha").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_wha").append('<th><input class="form-control input-sm" type="text" id="fta_wha1" style="border-radius:5px;"></th>');
@@ -499,7 +507,7 @@ $(document).ready(function(){
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
         $("#btn_git").append('<i id="activ_git" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
-        $("#tabla_asignados").append('<tr id="fta_git"></tr>');
+        $("#tabla_procesos").append('<tr id="fta_git"></tr>');
         $("#fta_git").append("<th>Git</th>");
         $("#fta_git").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_git").append('<th><input class="form-control input-sm" type="text" id="fta_git1" style="border-radius:5px;"></th>');
@@ -537,7 +545,7 @@ $(document).ready(function(){
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
         $("#btn_cal").append('<i id="activ_cal" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
-        $("#tabla_asignados").append('<tr id="fta_cal"></tr>');
+        $("#tabla_procesos").append('<tr id="fta_cal"></tr>');
         $("#fta_cal").append("<th>Calculadora</th>");
         $("#fta_cal").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_cal").append('<th><input class="form-control input-sm" type="text" id="fta_cal1" style="border-radius:5px;"></th>');
@@ -575,7 +583,7 @@ $(document).ready(function(){
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
         $("#btn_acr").append('<i id="activ_acr" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
-        $("#tabla_asignados").append('<tr id="fta_acr"></tr>');
+        $("#tabla_procesos").append('<tr id="fta_acr"></tr>');
         $("#fta_acr").append("<th>Acrobat Reader</th>");
         $("#fta_acr").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_acr").append('<th><input class="form-control input-sm" type="text" id="fta_acr1" style="border-radius:5px;"></th>');
@@ -613,7 +621,7 @@ $(document).ready(function(){
 
         //Insertar nueva filas con respectivas columnas en la tabla de Recursos asignados actualmente
         $("#btn_ges").append('<i id="activ_ges" class="glyphicon glyphicon-ok-sign text-success" style="float:right;"></i>');
-        $("#tabla_asignados").append('<tr id="fta_ges"></tr>');
+        $("#tabla_procesos").append('<tr id="fta_ges"></tr>');
         $("#fta_ges").append("<th>Gestion de la bateria</th>");
         $("#fta_ges").append('<th style="color:#00a65a;">Activo</th>');
         $("#fta_ges").append('<th><input class="form-control input-sm" type="text" id="fta_ges1" style="border-radius:5px;"></th>');
@@ -643,6 +651,22 @@ $(document).ready(function(){
         procesos_flags[14] = 0;
         --inf_proc.numProc_tabla;
         inf_proc.sacarProceso_nom("ges");
+      }
+    }
+  });
+  $('#btn_tres').click(function(event) {
+    console.log("entre por el boton de la modal");
+    for (i = 0; i < 18; i++) {
+      if (i > 0 && i < 16) {
+        $('#ftres_'+i).append('<th style="text-align:center;"></th>');
+        continue;
+      }
+      else if (i === 0) {
+        $('#ftres_'+i).append('<th style="text-align:center;">'+$("#rec_nom").val()+'</th>');
+        continue;
+      }
+      else {
+        $('#ftres_'+i).append('<th style="text-align:center;">'+$("#rec_cant").val()+'</th>');
       }
     }
   });
