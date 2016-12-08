@@ -11451,7 +11451,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sZeroRecords": ""
+			"sZeroRecords": "No hay procesos en ejecucion..."
 		},
 
 

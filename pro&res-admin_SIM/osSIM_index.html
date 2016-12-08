@@ -66,49 +66,49 @@
       <ul class="sidebar-menu">
         <li class="header"><strong>PROGRAMAS DEL SISTEMA</strong></li>
         <li>
-          <a id="btn_exp"><i class="glyphicon glyphicon-folder-open"></i><span id="proceso_1">Explorador</span></a>
+          <a onclick="ejecutarProc(0)" id="btn_0"><i class="glyphicon glyphicon-folder-open"></i><span id="proceso_0">Explorador</span></a>
         </li>
         <li>
-          <a id="btn_chr"><i class="glyphicon glyphicon-globe"></i><span>Chrome</span></a>
+          <a onclick="ejecutarProc(1)" id="btn_1"><i class="glyphicon glyphicon-globe"></i><span id="proceso_1">Chrome</span></a>
         </li>
         <li>
-          <a id="btn_ter"><i class="glyphicon glyphicon-console"></i><span>Term. del sistema</span></a>
+          <a onclick="ejecutarProc(2)" id="btn_2"><i class="glyphicon glyphicon-console"></i><span id="proceso_2">Term. del Sistema</span></a>
         </li>
         <li>
-          <a id="btn_rep"><i class="glyphicon glyphicon-headphones"></i> <span>Reprod. Multimedia</span></a>
+          <a onclick="ejecutarProc(3)" id="btn_3"><i class="glyphicon glyphicon-headphones"></i> <span id="proceso_3">Reprod. Multimedia</span></a>
         </li>
         <li>
-          <a id="btn_not"><i class="glyphicon glyphicon-file"></i><span>Notepad++</span></a>
+          <a onclick="ejecutarProc(4)" id="btn_4"><i class="glyphicon glyphicon-file"></i><span id="proceso_4">Notepad++</span></a>
         </li>
         <li>
-          <a id="btn_adm"><i class="glyphicon glyphicon-list-alt"></i> <span>Admin. de tareas</span></a>
+          <a onclick="ejecutarProc(5)" id="btn_5"><i class="glyphicon glyphicon-list-alt"></i> <span id="proceso_5">Admin. de Tareas</span></a>
         </li>
         <li>
-          <a id="btn_sky"><i class="glyphicon glyphicon-user"></i><span>Skype</span></a>
+          <a onclick="ejecutarProc(6)" id="btn_6"><i class="glyphicon glyphicon-user"></i><span id="proceso_6">Skype</span></a>
         </li>
         <li>
-          <a id="btn_han"><i class="glyphicon glyphicon-header"></i><span>Hangouts</span></a>
+          <a onclick="ejecutarProc(7)" id="btn_7"><i class="glyphicon glyphicon-header"></i><span id="proceso_7">Hangouts</span></a>
         </li>
         <li>
-          <a id="btn_win"><i class="glyphicon glyphicon-compressed"></i> <span>Winrar</span></a>
+          <a onclick="ejecutarProc(8)" id="btn_8"><i class="glyphicon glyphicon-compressed"></i> <span id="proceso_8">Winrar</span></a>
         </li>
         <li>
-          <a id="btn_apa"><i class="glyphicon glyphicon-leaf"></i><span>Apache Server</span></a>
+          <a onclick="ejecutarProc(9)" id="btn_9"><i class="glyphicon glyphicon-leaf"></i><span id="proceso_9">Apache Server</span></a>
         </li>
         <li>
-          <a id="btn_wha"><i class="glyphicon glyphicon-comment"></i><span>Whatsapp</span></a>
+          <a onclick="ejecutarProc(10)" id="btn_10"><i class="glyphicon glyphicon-comment"></i><span id="proceso_10">Whatsapp</span></a>
         </li>
         <li>
-          <a id="btn_git"><i class="glyphicon glyphicon-transfer"></i><span>Git</span></a>
+          <a onclick="ejecutarProc(11)" id="btn_11"><i class="glyphicon glyphicon-transfer"></i><span id="proceso_11">Git</span></a>
         </li>
         <li>
-          <a id="btn_cal"><i class="glyphicon glyphicon-pencil"></i><span>Calculadora</span></a>
+          <a onclick="ejecutarProc(12)" id="btn_12"><i class="glyphicon glyphicon-pencil"></i><span id="proceso_12">Calculadora</span></a>
         </li>
         <li>
-          <a id="btn_acr"><i class="glyphicon glyphicon-text-background"></i><span>Acrobat Reader</span></a>
+          <a onclick="ejecutarProc(13)" id="btn_13"><i class="glyphicon glyphicon-text-background"></i><span id="proceso_13">Acrobat Reader</span></a>
         </li>
         <li>
-          <a id="btn_ges"><i class="glyphicon glyphicon-scale"></i><span>Gest. de bateria</span></a>
+          <a onclick="ejecutarProc(14)" id="btn_14"><i class="glyphicon glyphicon-scale"></i><span id="proceso_14">Gest. de Bateria</span></a>
         </li>
       </ul>
       <!-- /Listado de los procesos que se pueden ejecutar -->
@@ -121,7 +121,7 @@
     <!-- Cabecera de la caja envoltorio del contenido principal de la pagina -->
     <section class="content-header">
       <h1>
-        <i>Administrador de recursos del Sistema Operativo</i>
+        <i>Simulador de la administracion de recursos y procesos de un S.O</i>
         <small>Del tipo multiproceso-monohilo</small>
       </h1>
       <!-- Botones que para ejecutar unos ejemplos de simulacion -->
@@ -129,21 +129,21 @@
         <i class="glyphicon glyphicon-flag"></i>
         <label>Ejemplo (1)</label>
       </a>
-      <a id="btn_ejem2" class="btn btn-app">
+      <!--a id="btn_ejem2" class="btn btn-app">
         <i class="glyphicon glyphicon-flag"></i>
         <label>Ejemplo (2)</label>
-      </a>
-      <a id="btn_ejem3" class="btn btn-app">
+      </a-->
+      <!--a id="btn_ejem3" class="btn btn-app">
         <i class="glyphicon glyphicon-flag"></i>
         <label>Ejemplo (3)</label>
-      </a>
+      </a-->
       <!-- /Botones que para ejecutar unos ejemplos de simulacion -->
 
       <!-- Boton para limpiar los registros que seran implementados en un futuro -->
-      <a onclick="limpiarCampos()" id="btn_limpiar" class="btn btn-app">
+      <!--a onclick="limpiarCampos()" id="btn_limpiar" class="btn btn-app">
         <i class="glyphicon glyphicon-erase"></i>
         <label>Limpiar Registro</label>
-      </a>
+      </a-->
       <!-- /Boton para limpiar los registros que seran implementados en un futuro -->
     </section>
     <!-- /Cabecera de la caja envoltorio del contenido principal de la pagina -->
@@ -181,14 +181,14 @@
                     <table id="tabla_IPE" class="table table-bordered table-hover">
                       <thead>
                         <tr>
-                          <th >Procesos</th>
-                          <th >PID</th>
-                          <th >Estado</th>
-                          <th >Registro Base</th>
-                          <th >Registro Limite</th>
-                          <th >Recursos E/S</th>
-                          <th >CPU's</th>
-                          <th >Memoria</th>
+                          <th>Procesos</th>
+                          <th>PID</th>
+                          <th>Estado</th>
+                          <th>Registro Base</th>
+                          <th>Registro Limite</th>
+                          <th>Recursos E/S</th>
+                          <th>CPU's</th>
+                          <th>Memoria</th>
                         </tr>
                       </thead>
                       <tbody id="cont_IPE">
@@ -203,10 +203,10 @@
                     <table id="tabla_DAPE" class="table table-bordered table-hover">
                       <thead>
                         <tr>
-                          <th >Procesos</th>
-                          <th >Recursos E/S</th>
-                          <th >CPU's</th>
-                          <th >Memoria</th>
+                          <th>Procesos</th>
+                          <th>CPU's</th>
+                          <th>Memoria</th>
+                          <th>Disco</th>
                         </tr>
                       </thead>
                       <tbody id="cont_DAPE">
@@ -220,11 +220,12 @@
                     <h3 class="box-title"><strong>Recursos de Entrada y Salida (RES)</strong></h3>
                     <table id="tabla_RES" class="table table-bordered table-hover">
                       <thead>
-                        <tr id="ftres_0">
+                        <tr id="tRES_f0">
                           <th >Procesos</th>
                         </tr>
                       </thead>
                       <tbody id="cont_RES">
+
                       </tbody>
                     </table>
                     <button type="button" id="btn_nrec" class="btn btn-primary" data-toggle="modal" data-target="#rec_modal">
@@ -282,6 +283,13 @@
             <h4 class="modal-title"><strong>Nuevo Recurso</strong></h4>
           </div>
           <div class="modal-body">
+            <div id="alert_colRES" class="alert alert-info alert-dismissible" hidden>
+              <h4>
+                <i class="glyphicon glyphicon-info-sign"></i>
+                <label style="margin-left:10px;">Limite excedido</label>
+              </h4>
+              <p><strong>No se permiten mas de 8 recursos</strong></p>
+            </div>
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-text-size"></i></span>
               <input type="email" id="rec_nom" class="form-control" placeholder="Nombre">
@@ -294,7 +302,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cerrar</button>
-            <button type="button" id="btn_tres" class="btn btn-primary">Insertar</button>
+            <button type="button" id="btn_tRES" class="btn btn-primary">Insertar</button>
           </div>
         </div>
       </div>
@@ -352,18 +360,22 @@
 <script src="dist/js/app.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
-<!--Script que maneja la activacion y desactivacion de los procesos-->
-<script src="dist/js/manejarProceso.js"></script>
-<!-- Manejador adicional de la GUI que engloba funciones sencillas -->
-<script src="dist/js/manejadorGUI.js"></script>
-<!-- Script que maneja el algoritmo de deteccion de interbloqueos -->
-<script src="dist/js/bankerAlgorithm.js"></script>
-<!-- Script para poder implementar las tablas con caracteristicas completas -->
-<script src="dist/js/sleeper.js"></script>
-<!-- DataTables -->
-<script src="plugins/datatables/jquery.dataTables.js"></script>
-<script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
+<!-- Script que contiene funciones extras que no estan relacionadas con el proyecto -->
+<script src="dist/js/funcionesExtra.js"></script>
 <!-- Script para inicializar elementos de la GUI y asi no realizar una sobrecarga en codigo HTML5. -->
 <script src="dist/js/initGUI.js"></script>
+<script src="dist/js/variablesGlobal.js"></script>
+<!-- Script que Incorpora y maneja los recursos del simulador. -->
+<script src="dist/js/manejarRecursos.js"></script>
+<!--Script que maneja la activacion y desactivacion de los procesos-->
+<script src="dist/js/ejecutarProcesos.js"></script>
+<!-- Script que administra la memoria principal del simulador. -->
+<script src="dist/js/adminMemoria.js"></script>
+<!-- Script que maneja el algoritmo de deteccion de interbloqueos -->
+<script src="dist/js/bankerAlgorithm.js"></script>
+<!-- Script para montar el Ejemplo (1) -->
+<script src="dist/js/montarEjemplo1.js"></script>
+<!-- Script para poder implementar las tablas con caracteristicas completas -->
+<script src="dist/js/sleeper.js"></script>
 </body>
 </html>

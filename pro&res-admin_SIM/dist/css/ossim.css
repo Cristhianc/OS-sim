@@ -6,12 +6,12 @@ y al medio de una particion llena.*/
   border-right: 3px solid #3c8dbc;
   background-color:#80ced6;
 }
-#tabla_MP .mid-ranura-fill {
+#tabla_MP .mid-ran-fill {
   border-left: 3px solid #3c8dbc;
   border-right: 3px solid #3c8dbc;
   background-color:#80ced6;
 }
-#tabla_MP .bottom-ranura-fill {
+#tabla_MP .bottom-ran-fill {
   border-bottom: 3px solid #3c8dbc;
   border-left: 3px solid #3c8dbc;
   border-right: 3px solid #3c8dbc;
@@ -20,7 +20,14 @@ y al medio de una particion llena.*/
 
 /* Bordes que delimitan el area de la memoria principal por el medio y debajo
 de una particion que esta fragmentada.*/
-#tabla_MP .mid-ranura-fill {
+#tabla_MP .top-ran-frag {
+  border-top: 3px solid #3c8dbc;
+  border-left: 3px solid #3c8dbc;
+  border-right: 3px solid #3c8dbc;
+  background-color:#d5f4e6;
+}
+#tabla_MP .bottom-ran-frag {
+  border-bottom: 3px solid #3c8dbc;
   border-left: 3px solid #3c8dbc;
   border-right: 3px solid #3c8dbc;
   background-color:#d5f4e6;
@@ -28,16 +35,16 @@ de una particion que esta fragmentada.*/
 
 /* Bordes que delimitan el area de la memoria principal por encima, debajo
 y al medio de una particion vacia.*/
-#tabla_MP .top-ran-fill {
+#tabla_MP .top-ran-empty {
   border-top: 3px solid #3c8dbc;
   border-left: 3px solid #3c8dbc;
   border-right: 3px solid #3c8dbc;
 }
-#tabla_MP .mid-ranura-fill {
+#tabla_MP .mid-ran-empty {
   border-left: 3px solid #3c8dbc;
   border-right: 3px solid #3c8dbc;
 }
-#tabla_MP .bottom-ranura-fill {
+#tabla_MP .bottom-ran-empty {
   border-bottom: 3px solid #3c8dbc;
   border-left: 3px solid #3c8dbc;
   border-right: 3px solid #3c8dbc;
