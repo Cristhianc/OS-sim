@@ -1,18 +1,44 @@
 {
-  "procesos_flags" : [
-    "0",
-    "0",
-    "0",
-    "0",
-    "0",
-    "0",
-    "0",
-    "0",
-    "0",
-    "0",
-    "0",
-    "0",
-    "0",
-    "0",
-    "0"]
+  "numProc" : 0,
+  "minBloque" : 64,
+  "tamMP" : 1024,
+  "cantCPU" : 8,
+  "numAuto" : 0,
+  "minBloque" : ,
+  "tamMP" : ,
+  "totalCPUs" : ,
+  "utilCPUs" : ,
+  "columnasRES" : 1,
+  "lista_proc" : [],
+  "procesos_flags" : [ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 ],
+  "ejem1Montado" : 0,
+  "recursos_SIM" : [
+    [
+      "Impresora",
+      "Camara Web",
+      "Archivo.docx",
+      "Archivo.mp4",
+      "Archivo.pdf"
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      3,
+      3,
+      1,
+      1,
+      1
+    ],
+    { "numAuto" : 0 },
+    { "minBloque" : 0 },
+    { "tamMP" : 0 },
+    { "totalCPUs" : 8 },
+    { "utilCPUs" : 0 },
+    { "utilMP" : 0 }
+  ]
 }

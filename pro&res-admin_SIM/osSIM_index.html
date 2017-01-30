@@ -66,49 +66,49 @@
       <ul class="sidebar-menu">
         <li class="header"><strong>PROGRAMAS DEL SISTEMA</strong></li>
         <li>
-          <a onclick="ejecutarProc(0)" id="btn_0"><i class="glyphicon glyphicon-folder-open"></i><span id="proceso_0">Explorador</span></a>
+          <a onclick="ejecutarProceso(0)" id="btn_0"><i class="glyphicon glyphicon-folder-open"></i><span id="proceso_0">Explorador</span></a>
         </li>
         <li>
-          <a onclick="ejecutarProc(1)" id="btn_1"><i class="glyphicon glyphicon-globe"></i><span id="proceso_1">Chrome</span></a>
+          <a onclick="ejecutarProceso(1)" id="btn_1"><i class="glyphicon glyphicon-globe"></i><span id="proceso_1">Chrome</span></a>
         </li>
         <li>
-          <a onclick="ejecutarProc(2)" id="btn_2"><i class="glyphicon glyphicon-console"></i><span id="proceso_2">Term. del Sistema</span></a>
+          <a onclick="ejecutarProceso(2)" id="btn_2"><i class="glyphicon glyphicon-console"></i><span id="proceso_2">Term. del Sistema</span></a>
         </li>
         <li>
-          <a onclick="ejecutarProc(3)" id="btn_3"><i class="glyphicon glyphicon-headphones"></i> <span id="proceso_3">Reprod. Multimedia</span></a>
+          <a onclick="ejecutarProceso(3)" id="btn_3"><i class="glyphicon glyphicon-headphones"></i> <span id="proceso_3">Reprod. Multimedia</span></a>
         </li>
         <li>
-          <a onclick="ejecutarProc(4)" id="btn_4"><i class="glyphicon glyphicon-file"></i><span id="proceso_4">Notepad++</span></a>
+          <a onclick="ejecutarProceso(4)" id="btn_4"><i class="glyphicon glyphicon-file"></i><span id="proceso_4">Notepad++</span></a>
         </li>
         <li>
-          <a onclick="ejecutarProc(5)" id="btn_5"><i class="glyphicon glyphicon-list-alt"></i> <span id="proceso_5">Admin. de Tareas</span></a>
+          <a onclick="ejecutarProceso(5)" id="btn_5"><i class="glyphicon glyphicon-list-alt"></i> <span id="proceso_5">Admin. de Tareas</span></a>
         </li>
         <li>
-          <a onclick="ejecutarProc(6)" id="btn_6"><i class="glyphicon glyphicon-user"></i><span id="proceso_6">Skype</span></a>
+          <a onclick="ejecutarProceso(6)" id="btn_6"><i class="glyphicon glyphicon-user"></i><span id="proceso_6">Skype</span></a>
         </li>
         <li>
-          <a onclick="ejecutarProc(7)" id="btn_7"><i class="glyphicon glyphicon-header"></i><span id="proceso_7">Hangouts</span></a>
+          <a onclick="ejecutarProceso(7)" id="btn_7"><i class="glyphicon glyphicon-header"></i><span id="proceso_7">Hangouts</span></a>
         </li>
         <li>
-          <a onclick="ejecutarProc(8)" id="btn_8"><i class="glyphicon glyphicon-compressed"></i> <span id="proceso_8">Winrar</span></a>
+          <a onclick="ejecutarProceso(8)" id="btn_8"><i class="glyphicon glyphicon-compressed"></i> <span id="proceso_8">Winrar</span></a>
         </li>
         <li>
-          <a onclick="ejecutarProc(9)" id="btn_9"><i class="glyphicon glyphicon-leaf"></i><span id="proceso_9">Apache Server</span></a>
+          <a onclick="ejecutarProceso(9)" id="btn_9"><i class="glyphicon glyphicon-leaf"></i><span id="proceso_9">Apache Server</span></a>
         </li>
         <li>
-          <a onclick="ejecutarProc(10)" id="btn_10"><i class="glyphicon glyphicon-comment"></i><span id="proceso_10">Whatsapp</span></a>
+          <a onclick="ejecutarProceso(10)" id="btn_10"><i class="glyphicon glyphicon-comment"></i><span id="proceso_10">Whatsapp</span></a>
         </li>
         <li>
-          <a onclick="ejecutarProc(11)" id="btn_11"><i class="glyphicon glyphicon-transfer"></i><span id="proceso_11">Git</span></a>
+          <a onclick="ejecutarProceso(11)" id="btn_11"><i class="glyphicon glyphicon-transfer"></i><span id="proceso_11">Git</span></a>
         </li>
         <li>
-          <a onclick="ejecutarProc(12)" id="btn_12"><i class="glyphicon glyphicon-pencil"></i><span id="proceso_12">Calculadora</span></a>
+          <a onclick="ejecutarProceso(12)" id="btn_12"><i class="glyphicon glyphicon-pencil"></i><span id="proceso_12">Calculadora</span></a>
         </li>
         <li>
-          <a onclick="ejecutarProc(13)" id="btn_13"><i class="glyphicon glyphicon-text-background"></i><span id="proceso_13">Acrobat Reader</span></a>
+          <a onclick="ejecutarProceso(13)" id="btn_13"><i class="glyphicon glyphicon-text-background"></i><span id="proceso_13">Acrobat Reader</span></a>
         </li>
         <li>
-          <a onclick="ejecutarProc(14)" id="btn_14"><i class="glyphicon glyphicon-scale"></i><span id="proceso_14">Gest. de Bateria</span></a>
+          <a onclick="ejecutarProceso(14)" id="btn_14"><i class="glyphicon glyphicon-scale"></i><span id="proceso_14">Gest. de Bateria</span></a>
         </li>
       </ul>
       <!-- /Listado de los procesos que se pueden ejecutar -->
@@ -194,6 +194,62 @@
                       <tbody id="cont_IPE">
                       </tbody>
                     </table>
+                    <!-- Boton y Contenido de la tabla PDD -->
+                    <a id="btn_algoritmos_Disco" class="btn btn-app">
+                      <i class="glyphicon glyphicon-flag"></i>
+                      <label>Ejecutar Algoritmos</label>
+                    </a>
+                    <h3 class="box-title"><strong>Planificacion del disco (PDD)</strong></h3>
+
+                    <!-- Tabla para la cola de los procesos -->
+                    <h3 class="box-title"><strong>Cola de Procesos (CP)</strong></h3>
+                    <table id="tabla_CP" class="table table-bordered table-hover">
+                      <thead id="cabecera_CP">
+                        <tr id="procesos_CP">
+                          <th>Cola/Procesos</th>
+                        </tr>
+                      </thead>
+                      <tbody id="cont_CP">
+                        <tr id="posiciones_CP">
+                          <th>Cilindro</th>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- /Tabla para la cola de los procesos -->
+
+                    <!-- Tabla para la cola generada al aplicar el algoritmo FCFS -->
+                    <h3 class="box-title"><strong>Algoritmo FCFS</strong></h3>
+                    <table id="tabla_FCFS" class="table table-bordered table-hover">
+                      <thead id="cabecera_FCFS">
+                        <tr id="procesos_FCFS">
+                          <th>Cola/Procesos</th>
+                        </tr>
+                      </thead>
+                      <tbody id="cont_FCFS">
+                        <tr id="posiciones_FCFS">
+                          <th>Cilindro</th>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- /Tabla para la cola generada al aplicar el algoritmo SSTF -->
+
+                    <!-- Tabla para la cola generada al aplicar el algoritmo SSTF -->
+                    <h3 class="box-title"><strong>Algoritmo SSTF</strong></h3>
+                    <table id="tabla_SSTF" class="table table-bordered table-hover">
+                      <thead id="cabecera_SSTF">
+                        <tr id="procesos_SSTF">
+                          <th>Cola/Procesos</th>
+                        </tr>
+                      </thead>
+                      <tbody id="cont_SSTF">
+                        <tr id="posiciones_SSTF">
+                          <th>Cilindro</th>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- /Tabla para la cola generada al aplicar el algoritmo SSTF -->
+                    
+                    <!-- /Boton y Contenido de la tabla PDD -->
                   </div>
                   <!-- /Contenido de la pestaña 1: tabla_IPE. -->
 
@@ -206,7 +262,7 @@
                           <th>Procesos</th>
                           <th>CPU's</th>
                           <th>Memoria</th>
-                          <th>Disco</th>
+                          <th>Posicion en Disco</th>
                         </tr>
                       </thead>
                       <tbody id="cont_DAPE">
@@ -361,21 +417,22 @@
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 <!-- Script que contiene funciones extras que no estan relacionadas con el proyecto -->
-<script src="dist/js/funcionesExtra.js"></script>
+<script src="dist/js/Extras/calculos.js"></script>
 <!-- Script para inicializar elementos de la GUI y asi no realizar una sobrecarga en codigo HTML5. -->
-<script src="dist/js/initGUI.js"></script>
-<script src="dist/js/variablesGlobal.js"></script>
+<script src="dist/js/Extras/initGUI.js"></script>
+<script src="dist/js/Extras/variablesGlobal.js"></script>
 <!-- Script que Incorpora y maneja los recursos del simulador. -->
-<script src="dist/js/manejarRecursos.js"></script>
+<script src="dist/js/recursos/manejarRecursos.js"></script>
 <!--Script que maneja la activacion y desactivacion de los procesos-->
-<script src="dist/js/ejecutarProcesos.js"></script>
+<script src="dist/js/procesos/ejecutarProcesos.js"></script>
 <!-- Script que administra la memoria principal del simulador. -->
-<script src="dist/js/adminMemoria.js"></script>
+<script src="dist/js/memoria/adminMemoria.js"></script>
 <!-- Script que maneja el algoritmo de deteccion de interbloqueos -->
-<script src="dist/js/bankerAlgorithm.js"></script>
+<script src="dist/js/interbloqueo/bankerAlgorithm.js"></script>
 <!-- Script para montar el Ejemplo (1) -->
-<script src="dist/js/montarEjemplo1.js"></script>
+<script src="dist/js/Extras/montarEjemplos.js"></script>
 <!-- Script para poder implementar las tablas con caracteristicas completas -->
-<script src="dist/js/sleeper.js"></script>
+<script src="dist/js/Extras/sleeper.js"></script>
+<script src="dist/js/planificacion de disco/algoritmosDisco.js"></script>
 </body>
 </html>

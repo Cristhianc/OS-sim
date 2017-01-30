@@ -52,7 +52,9 @@ y al medio de una particion vacia.*/
 
 /* Alinea el texto de todas las tablas.*/
 #tabla_IPE th, #tabla_DAPE th,
-#tabla_RES th, #tabla_MP th {
+#tabla_RES th, #tabla_MP th,
+#tabla_FCFS th, #tabla_SSTF th,
+#tabla_CP th {
   text-align: center;
 }
 

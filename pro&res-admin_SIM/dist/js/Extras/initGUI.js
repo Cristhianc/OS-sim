@@ -1,5 +1,9 @@
-window.addEventListener('load', initGUI, false);
-function initGUI() {
+// Script que contiene los eventos y funciones al inicializar la GUI
+
+// Añade un evento que inicializa algunos elementos de la GUI del simulador
+window.addEventListener('load', inicializar_GUI, false);
+function inicializar_GUI() {
+
   //Añade a la tabla DAPE las filas y columnas predeterminadas.
   $("#cont_DAPE").append('<tr><th>Explorador</th>' +
     '<th id="tDAPE_f1c1"></th>' +
@@ -89,3 +93,32 @@ function initGUI() {
   $("#cont_RES").append('<tr id="tRES_f16"><th>Total Utilizado</th></tr>');
   $("#cont_RES").append('<tr id="tRES_f17"><th>Total Disponible</th></tr>');
 };
+
+// Eventos que se cargan una vez el DOM fue renderizado
+$(document).ready(function(){
+
+  //Monta el ejemplo 1
+  $("#btn_ejem1").click(function(event) {
+      montarEjemplo_1();
+  });
+
+  /* Evento que añade un nuevo recurso al simulador con el boton Insertar
+   * contenido en la caja modal.
+   */
+  $('#btn_tRES').click(function(event) {
+    if (columnasRES < 9) {
+      nombre_recurso = $("#rec_nom").val();
+      cant_total_rec = $("#rec_cant").val();
+      nuevoRecurso(nombre_recurso, cant_total_rec);
+    }
+    else {
+      $("#alert_colRES").removeAttr("hidden");
+    }
+  });
+
+  $("#btn_algoritmos_Disco").click(function(event) {
+    actualizar_tabla_PDD();
+    ejecutar_fcfs();
+    ejecutar_sstf();
+  });
+});

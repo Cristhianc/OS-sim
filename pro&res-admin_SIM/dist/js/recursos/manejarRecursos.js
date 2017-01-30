@@ -1,20 +1,6 @@
-/*Funcion que al cargar la pagina por completo le añade un evento al boton
-  btn_tRES.*/
-$(document).ready(function() {
-    /*Evento que añade un nuevo recurso al simulador con el boton Insertar
-    contenido en la caja modal.*/
-  $('#btn_tRES').click(function(event) {
-    if (columnasRES < 9) {
-      nombre_recurso = $("#rec_nom").val();
-      cant_total_rec = $("#rec_cant").val();
-      nuevoRecurso(nombre_recurso, cant_total_rec);
-    }
-    else {
-      //$("#alert_colRES").val("Limite de recursos excedido");
-      $("#alert_colRES").removeAttr("hidden");
-    }
-  });
-});
+/* Script que se encarga de manejar los recursos de Entrada y Salida del
+ * simulador.
+ */
 
 //Funcion para añadir un nuevo recurso al simulador
 function nuevoRecurso(nombreREC, cantTOTAL) {
@@ -64,12 +50,12 @@ function agregarRES(filRes, colRes) {
   if (cantRES > 0) {
     cantRES_proc = parseInt($('#tRES_f' + filRes + 'c' + colRes).html());
     if (cantRES_proc === 0) {
-      lista_proc[filRes-1].rec_ES[0].push(nomRES);
-      lista_proc[filRes-1].rec_ES[1].push(++cantRES_proc);
+      lista_procesos[filRes-1].recursos_ES[0].push(nomRES);
+      lista_procesos[filRes-1].recursos_ES[1].push(++cantRES_proc);
     }
     else {
-      indRES_proc = lista_proc[filRes-1].rec_ES[0].indexOf(nomRES);
-      lista_proc[filRes-1].rec_ES[1][indRES_proc] = ++cantRES_proc;
+      indRES_proc = lista_procesos[filRes-1].recursos_ES[0].indexOf(nomRES);
+      lista_procesos[filRes-1].recursos_ES[1][indRES_proc] = ++cantRES_proc;
     }
     ++recursos_SIM[1][indexRES];
     --recursos_SIM[2][indexRES];
@@ -84,14 +70,14 @@ function quitarRES(filRes, colRes) {
   indexRES = recursos_SIM[0].indexOf(nomRES);
   cantRES_proc = parseInt($('#tRES_f' + filRes + 'c' + colRes).html());
   if (cantRES_proc > 0) {
-    indRES_proc = lista_proc[filRes-1].rec_ES[0].indexOf(nomRES);
+    indRES_proc = lista_procesos[filRes-1].recursos_ES[0].indexOf(nomRES);
     if (cantRES_proc === 1) {
-      lista_proc[filRes-1].rec_ES[0].splice(indRES_proc, 1);
-      lista_proc[filRes-1].rec_ES[1].splice(indRES_proc, 1);
+      lista_procesos[filRes-1].recursos_ES[0].splice(indRES_proc, 1);
+      lista_procesos[filRes-1].recursos_ES[1].splice(indRES_proc, 1);
       --cantRES_proc;
     }
     else {
-      lista_proc[filRes-1].rec_ES[1][indRES_proc] = --cantRES_proc;
+      lista_procesos[filRes-1].recursos_ES[1][indRES_proc] = --cantRES_proc;
     }
     --recursos_SIM[1][indexRES];
     ++recursos_SIM[2][indexRES];
